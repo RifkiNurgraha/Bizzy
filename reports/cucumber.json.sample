@@ -1,0 +1,53 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Bizzy Homepage Pass",
+    "line": 1,
+    "id": "bizzy-homepage-pass",
+    "tags": [],
+    "uri": "features/homepage-assertion.feature",
+    "elements": [
+      {
+        "id": "bizzy-homepage-pass;assertion-pass",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Assertion Pass",
+        "tags": [
+          {
+            "name": "@home",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user is at homepage",
+            "match": {
+              "location": "step_definitions/homepage/pass-assertion.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6116
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the title is correct",
+            "match": {
+              "location": "step_definitions/homepage/pass-assertion.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 129
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
