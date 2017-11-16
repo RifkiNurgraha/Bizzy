@@ -25,7 +25,7 @@ module.exports = {
   test_settings : {
     default : {
       launch_url : process.env.BASE_URL,
-      selenium_port  : 4444,
+      selenium_port  : 4443,
       selenium_host  : "172.17.0.1",
       screenshots : {
         enabled : true,

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "node_modules/nightwatch/bin/nightwatch --config nightwatch.conf.js",
+    "test": "npm run test-chrome",
     "test-chrome": "node_modules/nightwatch/bin/nightwatch --config nightwatch_chrome.conf.js --env chrome",
     "test-firefox": "node_modules/nightwatch/bin/nightwatch --config nightwatch_firefox.conf.js --env firefox",
     "test-docker-chrome": "node_modules/nightwatch/bin/nightwatch --config docker-chrome-conf.js",
