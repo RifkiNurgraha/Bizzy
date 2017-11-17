@@ -24,7 +24,8 @@ module.exports = {
   disable_colors: false,                            //scenarios colors
   selenium: {                                       //selenium settings
     start_process: true,
-    server_path: './lib/selenium-server-standalone-3.7.1.jar',
+    // server_path: './lib/selenium-server-standalone-3.7.1.jar',
+    server_path: seleniumServer.path,
     log_path: 'logs',
     host: '127.0.0.1',
     port: 4444
@@ -54,7 +55,8 @@ module.exports = {
       },
       selenium: {
         cli_args: {
-          'webdriver.chrome.driver': './lib/chromedriver'
+          // 'webdriver.chrome.driver': './lib/chromedriver'
+          'webdriver.chrome.driver': chromedriver.path
         }
       }
     }

@@ -14,7 +14,7 @@
   "version": "1.0.0",
   "description": "nightwatchjs poc automation",
   "main": "nightwatch.conf.js",
-  "dependencies": {
+  "devDependencies": {
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
     "chromedriver": "^2.33.2",
@@ -42,6 +42,5 @@
   },
   "author": "SDET Bizzy",
   "license": "",
-  "homepage": "https://bitbucket.org/bizzyindonesia/nightwatchjs-poc-automation#readme",
-  "devDependencies": {}
+  "homepage": "https://bitbucket.org/bizzyindonesia/nightwatchjs-poc-automation#readme"
 }
