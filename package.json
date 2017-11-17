@@ -1,8 +1,8 @@
 {
   "scripts": {
     "test": "npm run test-chrome",
-    "test-chrome": "node_modules/nightwatch/bin/nightwatch --config nightwatch_chrome.conf.js --env chrome",
-    "test-firefox": "node_modules/nightwatch/bin/nightwatch --config nightwatch_firefox.conf.js --env firefox",
+    "test-chrome": "node_modules/nightwatch/bin/nightwatch --config nightwatch_chrome.conf.js --env chrome --tag instagram",
+    "test-firefox": "node_modules/nightwatch/bin/nightwatch --config nightwatch_firefox.conf.js --env firefox --tag instagram",
     "test-docker-chrome": "node_modules/nightwatch/bin/nightwatch --config docker-chrome-conf.js",
     "test-docker-firefox": "node_modules/nightwatch/bin/nightwatch --config docker-firefox-conf.js",
     "report-chrome": "node reports/chrome/create-html-report-chrome.js",
