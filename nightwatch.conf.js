@@ -2,6 +2,9 @@ const seleniumServer = require('selenium-server');  //selenium server package
 const chromedriver = require('chromedriver');       //seleniium chrome driver
 const geckodriver = require('geckodriver');         //selenium firefox driver
 const env = require('dotenv').config();
+const binpath = './node_modules/chromedriver/lib/chromedriver/';
+const cmd = require('node-cmd');
+const fs = require('fs');
 
 require('nightwatch-cucumber')({
   nightwatchOutput: true,
@@ -13,7 +16,7 @@ require('nightwatch-cucumber')({
     'tests/features']
 });
 
-module.exports = {
+const nighwatchConfig = {
   test_workers: true,                               //for paralel test
   page_objects_path: 'tests/page-objects',          //page object options
   output_folder: 'reports',                         //output reports
@@ -71,3 +74,5 @@ module.exports = {
     }
   }
 };
+
+module.exports = nighwatchConfig;
