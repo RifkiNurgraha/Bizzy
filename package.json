@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "postinstall": "node driverconfigcheck.js",
+    "postinstall": "node modules_config_check.js",
     "test": "npm run test-chrome",
-    "test-chrome": "node_modules/nightwatch/bin/nightwatch --config nightwatch_chrome.conf.js --env chrome --tag instagram",
-    "test-firefox": "node_modules/nightwatch/bin/nightwatch --config nightwatch_firefox.conf.js --env firefox --tag instagram",
+    "test-chrome": "node_modules/nightwatch/bin/nightwatch --config nightwatch_chrome.conf.js --env chrome",
+    "test-firefox": "node_modules/nightwatch/bin/nightwatch --config nightwatch_firefox.conf.js --env firefox",
     "test-docker-chrome": "node_modules/nightwatch/bin/nightwatch --config docker-chrome-conf.js",
     "test-docker-firefox": "node_modules/nightwatch/bin/nightwatch --config docker-firefox-conf.js",
     "report-chrome": "node reports/chrome/create-html-report-chrome.js",
@@ -11,9 +11,9 @@
     "test-api": "mocha ./tests/api --recursive --reporter mochawesome --reporter-options reportDir=reports/mochawesome/ --timeout 30000",
     "test-api-parallel": "./node_modules/mocha-parallel-tests/dist/bin/mocha-parallel-tests ./tests/api --recursive --max-parallel 8 --timeout 30000"
   },
-  "name": "nightwatchjs-poc-automation",
+  "name": "nightwatchjs-mocha-poc-automation",
   "version": "1.0.0",
-  "description": "nightwatchjs poc automation",
+  "description": "nightwatchjs mocha poc automation",
   "main": "nightwatch.conf.js",
   "devDependencies": {
     "body-parser": "^1.18.2",
@@ -24,6 +24,7 @@
     "cucumber-pretty": "0.0.5",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
+    "geckodriver": "^1.10.0",
     "latest": "^0.2.0",
     "mocha": "^3.5.3",
     "mocha-parallel-tests": "^1.2.10",
@@ -38,9 +39,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/bizzyindonesia/nightwatchjs-poc-automation.git"
+    "url": "git+ssh://git@bitbucket.org/bizzyindonesia//nightwatch-mocha-poc-automation.git"
   },
   "author": "SDET Bizzy",
   "license": "",
-  "homepage": "https://bitbucket.org/bizzyindonesia/nightwatchjs-poc-automation#readme"
+  "homepage": "https://bitbucket.org/bizzyindonesia/nightwatch-mocha-poc-automation#readme"
 }
