@@ -7,7 +7,7 @@ var checkChromeDriver = function() {
   console.log('Checking Chromedriver');
   require('fs').stat(chromedriverPath, function (err, stat) {
     if (err || !stat || stat.size < 1) {
-    console.log('Checking ChromeDriver');
+    console.log('Downloading Chromedriver');
     downloadDriver('chromedriver');
     } else {
       console.log('Chromedriver is available at: ' + chromedriverPath);
@@ -19,7 +19,7 @@ var checkGeckoDriver = function() {
   console.log('Checking Geckodriver');
   require('fs').stat(geckodriverPath, function (err, stat) {
     if (err || !stat || stat.size < 1) {
-      console.log('Checking GeckoDriver');
+      console.log('Downloading Geckodriver');
       downloadDriver('geckodriver');
     } else {
       console.log('Geckodriver is available at: ' + geckodriverPath);
