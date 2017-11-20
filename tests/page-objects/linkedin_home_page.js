@@ -3,7 +3,9 @@ var base = require('./../helper/base_page.js');
 
 var linkedinHome = {
     url: function set_url() {
-      return 'https://www.linkedin.com/';
+      var url = process.env.BASE_URL_FACEBOOK;
+      console.log(url);
+      return url;
     },
     elements: {
       pageTitleLinkedin: 'LinkedIn: Log In or Sign Up'

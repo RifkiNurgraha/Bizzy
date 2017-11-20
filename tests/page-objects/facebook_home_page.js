@@ -3,7 +3,9 @@ var base = require('./../helper/base_page.js');
 
 var facebookHome = {
     url: function set_url() {
-      return 'https://www.facebook.com/';
+      var url = process.env.BASE_URL_FACEBOOK;
+      console.log(url);
+      return url;
     },
     elements: {
       pageTitleFacebook: 'Facebook - Masuk atau Daftar'

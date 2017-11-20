@@ -3,9 +3,9 @@ var base = require('./../helper/base_page.js');
 
 var home = {
   url: function set_url() {
-    var u = process.env.BASE_URL;
-    console.log(u);
-    return u;
+    var url = process.env.BASE_URL;
+    console.log(url);
+    return url;
   },
   elements: {
     pageTitleBizzy: 'Belanja Alat Kantor, Elektronik, Dapur Harga Murah - Bizzy',
