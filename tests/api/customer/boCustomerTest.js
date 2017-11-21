@@ -24,22 +24,19 @@ var bodyNew = function() {
 }
 
 // POST /customer then GET /customer
-customer.postCustomer(bodyNew(), custString.description, custString.describeIt.checkCreated, 'correct_token')
-.then(res => {
-  expect(res.status).to.equal(200);
-  expect(res.body.firstname).to.equal(bodyNew()['data']['customer']['name']);
-  return res;
-})
-.then(res => customer.getCustomer(res.body.id, custString.description, custString.describeIt.checkData, 'correct_token'))
-.then(res => {
-  expect(res.status).to.equal(200);
-  // expect(res.body.data[0].customer.name).to.equal(customerNameNew);
+customer.postCustomer(bodyNew(), custString.description, custString.describeIt.checkCreated, 'correct_token', function(response) {
+  expect(response.status).to.equal(200);
+  expect(response.body.firstname).to.equal(bodyNew()['data']['customer']['name']);
 });
 
 // GET /customer
 customer.getCustomer(customerID, custString.description, custString.describeIt.checkData, 'correct_token', function(response) {
-  expect(response.status).to.equal(20);
-  expect(response.body.data[0].customer.name).to.equal('PT DJ 100306');
+  console.log("=============");
+  console.log(response.body);
+  console.log("=============");
+  expect(response.status).to.equal(200);
+  expect(response.body.data[0].customer.name).to.equal('PT DJ 100306');;
+  return response;
 });
 
 //GET /customer => check mandatory data

@@ -9,7 +9,7 @@
     "report-chrome": "node reports/chrome/create-html-report-chrome.js",
     "report-firefox": "node reports/firefox/create-html-report-firefox.js",
     "test-api": "mocha ./tests/api --recursive --reporter mochawesome --reporter-options reportDir=reports/mochawesome/ --timeout 30000",
-    "test-api-one": "mocha ./tests/api/magentoCustomerTest.js --recursive --reporter mochawesome --reporter-options reportDir=reports/mochawesome/ --timeout 30000",
+    "test-api-one": "./node_modules/mocha/bin/mocha ./tests/api/magentoCustomerTest.js --recursive --reporter mochawesome --reporter-options reportDir=reports/mochawesome/ --timeout 30000",
     "test-api-parallel": "./node_modules/mocha-parallel-tests/dist/bin/mocha-parallel-tests ./tests/api --recursive --max-parallel 8 --timeout 30000"
   },
   "name": "nightwatchjs-mocha-poc-automation",

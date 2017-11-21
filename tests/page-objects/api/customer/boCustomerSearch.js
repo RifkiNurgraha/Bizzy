@@ -8,8 +8,7 @@ var common = require ('./../../../helper/common.js');
 
 var customerSearchPath =  "/customer/search";
 
-var getCustomerSearch = function(custSearch, description, describeIt, tokenSelection) {
-  return new Promise((resolve, reject) => {
+var getCustomerSearch = function(custSearch, description, describeIt, tokenSelection, response) {
     describe('eCart - GET /customer/search', function() {
       describe('#' + description, function() {
         it(describeIt, function(done) {
@@ -18,12 +17,8 @@ var getCustomerSearch = function(custSearch, description, describeIt, tokenSelec
             .set('Authorization', common.bearer(tokenSelection))
             .set('Accept', 'application/json')
             .end(function(err, result) {
-              resolve(result);
-              if (err) {
-                return reject(err);
-              }
-              done();
-          })
+              response(result);
+              done(err);
         })
       })
     })

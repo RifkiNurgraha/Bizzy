@@ -47,7 +47,8 @@ customerSearch.getCustomerSearch(custSearchData.testData.custSearch3, custSearch
 });
 
 // GET /customer/search with unspecified data
-customerSearch.getCustomerSearch(custSearchData.testData.custSearch4, custSearchString.description, custSearchString.describeIt.unspecifiedData, 'icorrect_token', function(response) {
+customerSearch.getCustomerSearch(custSearchData.testData.custSearch4, custSearchString.description, custSearchString.describeIt.unspecifiedData, 'correct_token', function(response) {
+  console.log(response.body);
   expect(response.status).to.equal(200);
   expect(response.body.message).to.contain(custSearchData.testResult.custError);
 });

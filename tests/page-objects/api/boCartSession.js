@@ -11,30 +11,24 @@ var cartSessionPath = {
     addItemCart : "/cart/additem"
 };
 
-var postNewCart = function(body, description, describeIt, tokenSelection) {
-  return new Promise((resolve, reject) => {
-    describe('eCart - Post /cart/new', function() {
-      describe('#' + description, function() {
-        it(describeIt, function(done) {
-          api.get(cartSessionPath.newCart)
-            .set('Authorization', common.bearer(tokenSelection))
-            .set('Accept', 'application/json')
-            .send(body)
-            .end(function(err, result) {
-              resolve(result);
-              if (err) {
-                return reject(err);
-              }
-              done();
-          })
+var postNewCart = function(body, description, describeIt, tokenSelection, response) {
+  describe('eCart - Post /cart/new', function() {
+    describe('#' + description, function() {
+      it(describeIt, function(done) {
+        api.get(cartSessionPath.newCart)
+          .set('Authorization', common.bearer(tokenSelection))
+          .set('Accept', 'application/json')
+          .send(body)
+          .end(function(err, result) {
+            response(result);
+            done(err);
         })
       })
     })
   })
 };
 
-var postAddItemCart = function(body, description, describeIt, tokenSelection) {
-  return new Promise((resolve, reject) => {
+var postAddItemCart = function(body, description, describeIt, tokenSelection, response) {
     describe('eCart - Post /cart/additem', function() {
       describe('#' + description, function() {
         it(describeIt, function(done) {
@@ -43,16 +37,12 @@ var postAddItemCart = function(body, description, describeIt, tokenSelection) {
             .set('Accept', 'application/json')
             .send(body)
             .end(function(err, result) {
-              resolve(result);
-              if (err) {
-                return reject(err);
-              }
-              done();
+              response(result);
+              done(err);
           })
         })
       })
     })
-  })
 };
 
 module.exports = {
