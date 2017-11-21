@@ -31,9 +31,6 @@ customer.postCustomer(bodyNew(), custString.description, custString.describeIt.c
 
 // GET /customer
 customer.getCustomer(customerID, custString.description, custString.describeIt.checkData, 'correct_token', function(response) {
-  console.log("=============");
-  console.log(response.body);
-  console.log("=============");
   expect(response.status).to.equal(200);
   expect(response.body.data[0].customer.name).to.equal('PT DJ 100306');;
   return response;
