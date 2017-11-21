@@ -13,3 +13,5 @@ reports/firefox/*.json
 *.png
 *.log
 *.html
+.idea/
+.vscode/
