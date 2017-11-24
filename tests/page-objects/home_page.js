@@ -16,13 +16,6 @@ var home = {
   commands: [{
     navigateToHomePage: function() {
       return this.navigate();
-      // this.waitForElementPresent(home.elements.sslImage, 30000, function(result) {
-      //   console.log(result);
-      // });
-      // this.waitForElementVisible(home.elements.sslImage, 30000, function(result) {
-      //   console.log(result);
-      // });
-      // return this;
     },
     clickBizzySelectLinkText: function() {
       return base.clickElement(this, home.elements.bizzySelectLinkText);
