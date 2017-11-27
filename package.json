@@ -1,14 +1,14 @@
 {
   "scripts": {
     "postinstall": "node modules_config_check.js",
-    "test": "npm run test-chrome",
-    "test-chrome": "node_modules/nightwatch/bin/nightwatch --config nightwatch_chrome.conf.js --env chrome --tag instagram",
-    "test-firefox": "node_modules/nightwatch/bin/nightwatch --config nightwatch_firefox.conf.js --env firefox --tag instagram",
+    "test": "npm run test-docker-chrome",
+    "test-chrome": "node_modules/nightwatch/bin/nightwatch --config nightwatch_chrome.conf.js --env chrome",
+    "test-firefox": "node_modules/nightwatch/bin/nightwatch --config nightwatch_firefox.conf.js --env firefox",
     "test-docker-chrome": "node_modules/nightwatch/bin/nightwatch --config docker-chrome-conf.js",
     "test-docker-firefox": "node_modules/nightwatch/bin/nightwatch --config docker-firefox-conf.js",
     "report-chrome": "node reports/chrome/create-html-report-chrome.js",
     "report-firefox": "node reports/firefox/create-html-report-firefox.js",
-    "test-api": "mocha ./tests/api --recursive --reporter mochawesome --reporter-options reportDir=reports/mochawesome/ --timeout 30000",
+    "test-api": "./node_modules/mocha/bin/mocha ./tests/api --recursive --reporter mochawesome --reporter-options reportDir=reports/mochawesome/ --timeout 30000",
     "test-api-one": "./node_modules/mocha/bin/mocha ./tests/api/customerAddressTest.js --recursive --reporter mochawesome --reporter-options reportDir=reports/mochawesome/ --timeout 30000",
     "test-api-parallel": "./node_modules/mocha-parallel-tests/dist/bin/mocha-parallel-tests ./tests/api --recursive --max-parallel 8 --timeout 30000"
   },

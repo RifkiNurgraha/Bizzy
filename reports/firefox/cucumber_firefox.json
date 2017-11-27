@@ -1,0 +1,70 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Check Instagram home page",
+    "line": 1,
+    "id": "check-instagram-home-page",
+    "tags": [],
+    "uri": "tests/features/instagram-pages-check.feature",
+    "elements": [
+      {
+        "id": "check-instagram-home-page;assertion-instagram-home-page",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Assertion Instagram home page",
+        "tags": [
+          {
+            "name": "@desktop",
+            "line": 6
+          },
+          {
+            "name": "@home",
+            "line": 6
+          },
+          {
+            "name": "@instagram",
+            "line": 6
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user is at instagram homepage",
+            "match": {
+              "location": "tests/step_definitions/home/instagram_steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3702
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "user will see instagram page",
+            "match": {
+              "location": "tests/step_definitions/home/instagram_steps.js:10"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 27,
+              "error_message": "\n    at Object.assertPageTitle (/vagrant/nightwatch-mocha-poc-automation/tests/helper/base_page.js:38:22)\n    at Proxy.assertPageTitleInstagram (/vagrant/nightwatch-mocha-poc-automation/tests/page-objects/instagram_home_page.js:18:21)\n    at World.Then (/vagrant/nightwatch-mocha-poc-automation/tests/step_definitions/home/instagram_steps.js:11:20)"
+            },
+            "embeddings": [
+              {
+                "data": "iVBORw0KGgoAAAANSUhEUgAABVYAAAAICAYAAAAShaQyAAAAWElEQVR4nO3YMQ0AMAzAsPInvWLINVWyEeTOPAAAAAAAkvkdAAAAAABwjbEKAAAAABAZqwAAAAAAkbEKAAAAABAZqwAAAAAAkbEKAAAAABAZqwAAAAAA0QJmFh83fn9rjAAAAABJRU5ErkJggg==",
+                "media": {
+                  "type": "image/png"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

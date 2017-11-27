@@ -39,7 +39,8 @@ var customerBody = (
 
 var cartNewBody = ({
   "session_id": "",
-  "user_name": "Djoko"
+  "user_name": "Djoko",
+  "user_email": "djoko.haryono@bizzy.co.id"
 });
 
 var addItemBody = ({
