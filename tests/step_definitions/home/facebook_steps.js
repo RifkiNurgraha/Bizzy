@@ -10,12 +10,9 @@ Then(/^user will see facebook page$/, () => {
   return browser.assertPageTitleFacebook();
 });
 
-When(/^user click Buat Halaman Button$/, () => {
-  return browser.clickBuatHalaman();
-});
-
-When(/^wait for 5 seconds$/, () => {
-  return browser.pauseSleep();
+When(/^user click "([^"]*)" button$/, (button) => {
+  // return browser.clickBuatHalaman();
+  return browser.clickButtonFacebookHome(button);
 });
 
 Then(/^user will see facebook halaman page$/, () => {
@@ -29,11 +26,11 @@ Then(/^user will see text gratis$/, () => {
 When(/^user fill username and password$/, () => {
   return browser.setUserPass();
 })
+//
+// When(/^user click Login button$/, () => {
+//   return browser.clickLogin();
+// })
 
-When(/^user click Login button$/, () => {
-  return browser.clickLogin();
-})
-
-Then(/^user wil see user page$/, () => {
+Then(/^user will see user page$/, () => {
   return browser.assertUserPage();
 })

@@ -14,14 +14,16 @@ var facebookHome = {
       pageTitleFacebook: 'Facebook - Masuk atau Daftar',
       pageTitleFacebookHalaman: 'Buat Halaman | Facebook',
       emailData: process.env.FACEBOOK_USERNAME,
-      passData: process.env.FACEBOOK_PASSWORD
+      passData: process.env.FACEBOOK_PASSWORD,
+      profileNameData: process.env.FACEBOOK_PROFILE_NAME
     },
     elements: {
       gratisTextElement: '._4e2b.fsm.fwn.fcg',
       linkTextBuatHalaman: '#reg_pages_msg>a',
       email: '#email',
       pass: '#pass',
-      buttonLogin: '#u_0_5'
+      buttonLogin: '#u_0_5',
+      profileName: '._1vp5'
     },
     commands: [{
       navigateToFacebookHomePage: function() {
@@ -33,29 +35,30 @@ var facebookHome = {
       assertPageTitleFacebookHalaman: function() {
         return base.assertPageTitle(client, facebookHome.testData.pageTitleFacebookHalaman);
       },
+      clickButtonFacebookHome: function(button) {
+        if (button == 'Login') {
+          this.click('.uiButton.uiButtonConfirm>input');
+          base.pauseSleep(this.api, 5000);
+        } else if (button == 'Buat Halaman') {
+          base.clickElement(this, facebookHome.elements.linkTextBuatHalaman);
+        }
+      },
       clickBuatHalaman: function() {
-        return base.clickElement(this, facebookHome.elements.linkTextBuatHalaman);
-      },
-      assertGratisText: function() {
-        return this.api.expect.element(facebookHome.elements.gratisTextElement).text.to.equal(facebookHome.testData.gratisText);
-      },
-      pauseSleep: function() {
-        return client.pause(5000);
-      },
-      setUserPass: function() {
-        // client.clearValue(facebookHome.elements.email);
-        // client.clearValue(facebookHome.elements.pass);
-        client.setValue(facebookHome.elements.email, facebookHome.testData.emailData);
-        // base.setValueElement(this, facebookHome.elements.email, facebookHome.testData.emailData);
-        client.setValue(facebookHome.elements.pass, facebookHome.testData.passData);
-        // base.setValueElement(this, facebookHome.elements.pass, facebookHome.testData.passData);
-      },
-      assertUserPage: function() {
-        return client.assert.containsText('._1vp5', 'Wibowo');
+        base.clickElement(this, facebookHome.elements.linkTextBuatHalaman);
       },
       clickLogin: function() {
         this.click('.uiButton.uiButtonConfirm>input');
         base.pauseSleep(this.api, 5000);
+      },
+      assertGratisText: function() {
+        return this.api.expect.element(facebookHome.elements.gratisTextElement).text.to.equal(facebookHome.testData.gratisText);
+      },
+      setUserPass: function() {
+        base.setValueElement(this, facebookHome.elements.email, facebookHome.testData.emailData);
+        base.setValueElement(this, facebookHome.elements.pass, facebookHome.testData.passData);
+      },
+      assertUserPage: function() {
+        return client.assert.containsText(facebookHome.elements.profileName, facebookHome.testData.profileNameData);
       }
     }]
   }
