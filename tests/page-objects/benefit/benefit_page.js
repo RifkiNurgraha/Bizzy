@@ -2,9 +2,9 @@ const env = require('dotenv').config();
 var base = require('./../../helper/base_page.js');
 
 var benefit = {
-  url: function set_url() {
-    return '/select';
-  },
+  // url: function set_url() {
+  //   return '/select';
+  // },
   elements: {
     pageTitleBizzyBenefit: 'Bizzy Benefit - Bizzy'
   },

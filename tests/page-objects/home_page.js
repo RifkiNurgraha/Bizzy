@@ -3,7 +3,7 @@ var base = require('./../helper/base_page.js');
 
 var home = {
   url: function set_url() {
-    var url = process.env.BASE_URL;
+    var url = process.env.BASE_URL;  
     console.log(url);
     return url;
   },
@@ -28,7 +28,7 @@ var home = {
       return base.clickElement(this, home.elements.bizzySelectLinkText);
     },
     clickBizzyBenefitLinkText: function() {
-      return base.clickElement(this, home.elements.bizzyBenefitLinkText);
+      return base.clickEleidment(this, home.elements.bizzyBenefitLinkText);
     },
     scrollDownHomePage: function() {
       return this.getLocationInView(home.elements.sslImage);
