@@ -1,13 +1,36 @@
 const {client} = require('nightwatch-cucumber');
-const {defineSupportCode} = require('cucumber');
-var browser = client.page.facebook_home_page();
+const {Given, Then, When} = require('cucumber');
+const browser = client.page.facebook_home_page();
 
-defineSupportCode(({Given, Then, When}) => {
-    Given(/^user is at facebook homepage$/, () => {
-        return browser.navigateToFacebookHomePage();
-      });
+Given(/^user is at facebook homepage$/, () => {
+    return browser.navigateToFacebookHomePage();
+  });
 
-    Then(/^user will see facebook page$/, () => {
-    return browser.assertPageTitleFacebook();
-    });
+Then(/^user will see facebook page$/, () => {
+  return browser.assertPageTitleFacebook();
 });
+
+When(/^user click "([^"]*)" button$/, (button) => {
+  // return browser.clickBuatHalaman();
+  return browser.clickButtonFacebookHome(button);
+});
+
+Then(/^user will see facebook halaman page$/, () => {
+  return browser.assertPageTitleFacebookHalaman();
+});
+
+Then(/^user will see text gratis$/, () => {
+  return browser.assertGratisText();
+})
+
+When(/^user fill username and password$/, () => {
+  return browser.setUserPass();
+})
+//
+// When(/^user click Login button$/, () => {
+//   return browser.clickLogin();
+// })
+
+Then(/^user will see user page$/, () => {
+  return browser.assertUserPage();
+})

@@ -15,7 +15,7 @@ var postNewCart = function(body, description, describeIt, tokenSelection, respon
   describe('eCart - Post /cart/new', function() {
     describe('#' + description, function() {
       it(describeIt, function(done) {
-        api.get(cartSessionPath.newCart)
+        api.post(cartSessionPath.newCart)
           .set('Authorization', common.bearer(tokenSelection))
           .set('Accept', 'application/json')
           .send(body)
@@ -32,7 +32,7 @@ var postAddItemCart = function(body, description, describeIt, tokenSelection, re
     describe('eCart - Post /cart/additem', function() {
       describe('#' + description, function() {
         it(describeIt, function(done) {
-          api.get(cartSessionPath.addItemCart)
+          api.post(cartSessionPath.addItemCart)
             .set('Authorization', common.bearer(tokenSelection))
             .set('Accept', 'application/json')
             .send(body)

@@ -24,4 +24,12 @@ defineSupportCode(({Given, Then, When}) => {
     return browser.assertPageTitleBizzy();
   });
 
+  When(/^user click on "([^"]*)"$/, (link_text) => {
+    return browser.clickBizzyLinkText(link_text);
+  });
+
+  Then(/^user will see "([^"]*)" page$/, (pages) => {
+    return browser.assertPageTitleBizzyBenefit(pages);
+  });
+
 });
