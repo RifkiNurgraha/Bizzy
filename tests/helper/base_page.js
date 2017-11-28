@@ -46,7 +46,13 @@ var setValueElementThenEnter =  function(page, elementSelector, value, browser) 
 // get text from element
 var getStringText = function(page, elementSelector) {
   waitElementVisible(page, elementSelector);
-  return page.getText(selector);
+  return page.getText(elementSelector);
+}
+
+// check if the given element contains the specific text
+var assertContainsText = function(page, elementSelector, expectedText){
+  waitElementVisible(page, elementSelector);
+  return page.assert.containsText(elementSelector,expectedText);
 }
 
 // assert page title
@@ -64,6 +70,19 @@ var pauseSleep = function(page, timeSleep) {
   return page.pause(timeSleep);
 }
 
+// expect to be visible
+var expectVisible = function(page,elementSelector){
+  return page.expect.element(elementSelector).to.be.visible;
+}
+
+// choose an option from dropdown list
+var chooseOptionValue = function(page,elementSelector,selectedOption){
+  var optionValue = "option[value="+selectedOption+"]";
+  return page.click(elementSelector,()=>{
+    page.click(optionValue);
+  })
+}
+
 module.exports = {
   setURL: setURL,
   clickElement: clickElement,
@@ -74,6 +93,9 @@ module.exports = {
   assertPageTitle: assertPageTitle,
   pauseSleep: pauseSleep,
   scrollToElement: scrollToElement,
-  setValueElementThenEnter: setValueElementThenEnter
+  setValueElementThenEnter: setValueElementThenEnter,
+  expectVisible: expectVisible,
+  chooseOptionValue: chooseOptionValue,
+  assertStringTextFromElement: assertStringTextFromElement
   // scrollPage: scrollPage
 }
