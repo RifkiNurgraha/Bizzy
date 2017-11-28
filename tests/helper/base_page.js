@@ -56,6 +56,10 @@ var assertPageTitle = function(page, elementSelector) {
 //   })
 // }
 
+var scrollToElement =  function(page,elementSelector){
+  return page.moveToElement(elementSelector,0,0)
+}
+
 // sleep/pause page
 var pauseSleep = function(page, timeSleep) {
   return page.pause(timeSleep);
@@ -69,6 +73,7 @@ module.exports = {
   setValueElement: setValueElement,
   getStringText: getStringText,
   assertPageTitle: assertPageTitle,
-  pauseSleep: pauseSleep
+  pauseSleep: pauseSleep,
+  scrollToElement: scrollToElement
   // scrollPage: scrollPage
 }
