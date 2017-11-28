@@ -47,15 +47,7 @@ var assertPageTitle = function(page, elementSelector) {
   return page.assert.title(elementSelector);
 }
 
-// var scrollPage = function(page, elementSelector) {
-//   page.getLocationInView(elementSelector, funtion(result) {
-//     this.assert.equal(typeof result, "object");
-//     this.assert.equal(result.status, 0);
-//     this.assert.equal(result.value.x, 200);
-//     this.assert.equal(result.value.y, 200);
-//   })
-// }
-
+// scroll to element
 var scrollToElement =  function(page,elementSelector){
   return page.moveToElement(elementSelector,0,0)
 }
