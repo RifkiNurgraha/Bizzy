@@ -33,8 +33,7 @@ var home = {
       return base.clickElement(this, home.elements.bizzyBenefitLinkText);
     },
     scrollDownHomePage: function() {
-      //return this.getLocationInView(home.elements.sslImage);
-      return this.moveToElement(home.elements.sslImage);
+      return this.moveToElement(home.elements.sslImage,0,0);
     },
     assertPageTitleBizzy: function() {
       return base.assertPageTitle(this, home.elements.pageTitleBizzy);
