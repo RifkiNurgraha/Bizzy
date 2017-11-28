@@ -36,6 +36,13 @@ var setValueElement =  function(page, elementSelector, value) {
   page.setValue(elementSelector, value);
 }
 
+// set value to element then press ENTER
+var setValueElementThenEnter =  function(page, elementSelector, value, browser) {
+  waitElementVisible(page, elementSelector);
+  page.clearValue(elementSelector);
+  page.setValue(elementSelector, [value,browser.Keys.ENTER]);
+}
+
 // get text from element
 var getStringText = function(page, elementSelector) {
   waitElementVisible(page, elementSelector);
@@ -66,6 +73,7 @@ module.exports = {
   getStringText: getStringText,
   assertPageTitle: assertPageTitle,
   pauseSleep: pauseSleep,
-  scrollToElement: scrollToElement
+  scrollToElement: scrollToElement,
+  setValueElementThenEnter: setValueElementThenEnter
   // scrollPage: scrollPage
 }
