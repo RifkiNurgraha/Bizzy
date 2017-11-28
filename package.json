@@ -1,7 +1,7 @@
 {
   "scripts": {
     "postinstall": "node modules_config_check.js",
-    "test": "npm run test-chrome",
+    "test": "npm run test-docker-chrome",
     "test-chrome": "node_modules/nightwatch/bin/nightwatch --config nightwatch_chrome.conf.js --env chrome",
     "test-firefox": "node_modules/nightwatch/bin/nightwatch --config nightwatch_firefox.conf.js --env firefox",
     "test-docker-chrome": "node_modules/nightwatch/bin/nightwatch --config docker-chrome-conf.js",

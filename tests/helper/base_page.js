@@ -31,8 +31,8 @@ var waitElementVisible = function(page, elementSelector) {
 
 // set value to element
 var setValueElement =  function(page, elementSelector, value) {
-  // waitElementVisible(page, elementSelector);
-  // page.clearValue(elementSelector);
+  waitElementVisible(page, elementSelector);
+  page.clearValue(elementSelector);
   page.setValue(elementSelector, value);
 }
 
