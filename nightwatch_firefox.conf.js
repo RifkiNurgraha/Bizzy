@@ -54,7 +54,7 @@ module.exports = {
       },
       selenium: {
         cli_args: {
-          'webdriver.chrome.driver': geckodriver.path
+          'webdriver.gecko.driver': geckodriver.path
         }
       }
     }

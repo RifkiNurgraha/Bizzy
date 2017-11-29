@@ -5,8 +5,6 @@ var base = require('./../helper/base_page.js');
 var facebookHome = {
     url: function() {
       var url = base.setURL(process.env.BASE_URL_FACEBOOK);
-      // var url = process.env.BASE_URL_FACEBOOK;
-      // console.log('Accessing ' + url);
       return url;
     },
     testData: {
@@ -19,10 +17,10 @@ var facebookHome = {
     },
     elements: {
       gratisTextElement: '._4e2b.fsm.fwn.fcg',
-      linkTextBuatHalaman: '#reg_pages_msg>a',
-      email: '#email',
-      pass: '#pass',
-      buttonLogin: '#u_0_5',
+      linkTextBuatHalaman: '._58mk>a',
+      email: '.menu_login_container.rfloat._ohf>form>table>tbody>tr:nth-child(2)>td:nth-child(1)>input',
+      pass: '.menu_login_container.rfloat._ohf>form>table>tbody>tr:nth-child(2)>td:nth-child(2)>input',
+      buttonLogin: '.uiButton.uiButtonConfirm>input',
       profileName: '._1vp5'
     },
     commands: [{
@@ -37,8 +35,7 @@ var facebookHome = {
       },
       clickButtonFacebookHome: function(button) {
         if (button == 'Login') {
-          this.click('.uiButton.uiButtonConfirm>input');
-          base.pauseSleep(this.api, 5000);
+          base.clickElement(this, facebookHome.elements.buttonLogin);
         } else if (button == 'Buat Halaman') {
           base.clickElement(this, facebookHome.elements.linkTextBuatHalaman);
         }
