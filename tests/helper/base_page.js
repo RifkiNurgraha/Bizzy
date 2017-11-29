@@ -36,10 +36,23 @@ var setValueElement =  function(page, elementSelector, value) {
   page.setValue(elementSelector, value);
 }
 
+// set value to element then press ENTER
+var setValueElementThenEnter =  function(page, elementSelector, value, browser) {
+  waitElementVisible(page, elementSelector);
+  page.clearValue(elementSelector);
+  page.setValue(elementSelector, [value,browser.Keys.ENTER]);
+}
+
 // get text from element
 var getStringText = function(page, elementSelector) {
   waitElementVisible(page, elementSelector);
-  return page.getText(selector);
+  return page.getText(elementSelector);
+}
+
+// check if the given element contains the specific text
+var assertContainsText = function(page, elementSelector, expectedText){
+  waitElementVisible(page, elementSelector);
+  return page.assert.containsText(elementSelector,expectedText);
 }
 
 // assert page title
@@ -47,18 +60,26 @@ var assertPageTitle = function(page, elementSelector) {
   return page.assert.title(elementSelector);
 }
 
-// var scrollPage = function(page, elementSelector) {
-//   page.getLocationInView(elementSelector, funtion(result) {
-//     this.assert.equal(typeof result, "object");
-//     this.assert.equal(result.status, 0);
-//     this.assert.equal(result.value.x, 200);
-//     this.assert.equal(result.value.y, 200);
-//   })
-// }
+// scroll to element
+var scrollToElement =  function(page,elementSelector){
+  return page.moveToElement(elementSelector,0,0)
+}
 
 // sleep/pause page
 var pauseSleep = function(page, timeSleep) {
   return page.pause(timeSleep);
+}
+
+// expect to be visible
+var expectVisible = function(page,elementSelector){
+  return page.expect.element(elementSelector).to.be.visible;
+}
+
+// choose an option from dropdown list
+var chooseOptionValue = function(page,elementSelector,selectedOption){
+  return page.click(elementSelector,()=>{
+    page.click("option[value="+selectedOption+"]");
+  })
 }
 
 module.exports = {
@@ -69,6 +90,11 @@ module.exports = {
   setValueElement: setValueElement,
   getStringText: getStringText,
   assertPageTitle: assertPageTitle,
-  pauseSleep: pauseSleep
+  pauseSleep: pauseSleep,
+  scrollToElement: scrollToElement,
+  setValueElementThenEnter: setValueElementThenEnter,
+  expectVisible: expectVisible,
+  chooseOptionValue: chooseOptionValue,
+  assertContainsText: assertContainsText
   // scrollPage: scrollPage
 }

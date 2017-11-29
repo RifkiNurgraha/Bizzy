@@ -3,16 +3,15 @@ const expect = require('chai').expect;
 const common = require('./../helper/common.js');
 const testData = require('./../helper/testData.js');
 var cartSession = require('./../page-objects/api/boCartSession.js');
+var session = common.randomNumber();
 
 var bodyCartNew = function() {
-  var session = common.randomNumber();
   body = testData.cartNewBody;
   body['session_id'] = session;
   return body;
 };
 
 var bodyAddItemCart = function() {
-  var session = common.randomNumber();
   body = testData.addItemBody;
   body['session_id'] = session;
   return body;
