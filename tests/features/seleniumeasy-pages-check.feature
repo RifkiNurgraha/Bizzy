@@ -8,4 +8,17 @@ Scenario Outline: Practice dropdown
 
     Examples:
     |day    |
+    |Monday |
     |Tuesday|
+
+@seleniumeasy @radiobutton
+Scenario Outline: Practice radio button
+    Given user is at seleniumeasy radio button demo page
+    When user choose "<sex>" on sex list
+    Then user can see sex choosen "<sex>"
+    When user click get checked value button
+    Then user can see sex text "<sex>" displayed
+
+    Examples:
+    |sex    |
+    |Male   |
