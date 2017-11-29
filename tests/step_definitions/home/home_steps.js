@@ -25,11 +25,16 @@ defineSupportCode(({Given, Then, When}) => {
   });
 
   When(/^user click on "([^"]*)"$/, (link_text) => {
+    // if (link_text == 'Bizzy Select') {
+    //   return browser.clickBizzySelectLinkText();
+    // } else if (link_text == 'Bizzy Benefit') {
+    //   return browser.clickBizzyBenefitLinkText();
+    // }
     return browser.clickBizzyLinkText(link_text);
   });
 
   Then(/^user will see "([^"]*)" page$/, (pages) => {
-    return browser.assertPageTitleBizzyBenefit(pages);
+    return browser.assertPageTitleBizzyPages(pages);
   });
 
 });

@@ -1,4 +1,4 @@
-const seleniumServerPath = './node_modules/selenium-server/lib/runner/selenium-server-standalone-3.7.1.jar';
+const seleniumServerPath = './node_modules/selenium-server/lib/runner/selenium-server-standalone-3.4.0.jar';
 const chromedriverPath = './node_modules/chromedriver/lib/chromedriver/chromedriver';
 const geckodriverPath = './node_modules/geckodriver/geckodriver';
 const cmd = require('node-cmd');
@@ -32,7 +32,7 @@ var checkSeleniumServer = function() {
   require('fs').stat(seleniumServerPath, function (err, stat) {
     if (err || !stat || stat.size < 1) {
       console.log('Downloading Selenium Server');
-      downloadDriver('selenium-server');
+      downloadDriver('selenium-server@3.4.0');
     } else {
       console.log('Selenium Server is available at: ' + seleniumServerPath);
     }

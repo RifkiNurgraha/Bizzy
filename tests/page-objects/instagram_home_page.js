@@ -3,8 +3,7 @@ var base = require('./../helper/base_page.js');
 
 var instagramHome = {
     url: function set_url() {
-      var url = process.env.BASE_URL_INSTAGRAM;
-      console.log(url);
+      var url = base.setURL(process.env.BASE_URL_INSTAGRAM);
       return url;
     },
     elements: {
