@@ -13,3 +13,7 @@ reports/firefox/*.json
 *.png
 *.log
 *.html
+
+reports/chrome/
+
+reports/firefox/

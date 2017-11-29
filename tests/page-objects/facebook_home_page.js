@@ -55,7 +55,7 @@ var facebookHome = {
       },
       setUserPass: function() {
         base.setValueElement(this, facebookHome.elements.email, facebookHome.testData.emailData);
-        base.setValueElement(this, facebookHome.elements.pass, facebookHome.testData.passData);
+        base.setValueElementThenEnter(this, facebookHome.elements.pass, facebookHome.testData.passData, client);
       },
       assertUserPage: function() {
         return client.assert.containsText(facebookHome.elements.profileName, facebookHome.testData.profileNameData);

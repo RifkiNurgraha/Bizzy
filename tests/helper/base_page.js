@@ -36,10 +36,23 @@ var setValueElement =  function(page, elementSelector, value) {
   page.setValue(elementSelector, value);
 }
 
+// set value to element then press ENTER
+var setValueElementThenEnter =  function(page, elementSelector, value, browser) {
+  waitElementVisible(page, elementSelector);
+  page.clearValue(elementSelector);
+  page.setValue(elementSelector, [value,browser.Keys.ENTER]);
+}
+
 // get text from element
 var getStringText = function(page, elementSelector) {
   waitElementVisible(page, elementSelector);
-  return page.getText(selector);
+  return page.getText(elementSelector);
+}
+
+// check if the given element contains the specific text
+var assertContainsText = function(page, elementSelector, expectedText){
+  waitElementVisible(page, elementSelector);
+  return page.assert.containsText(elementSelector,expectedText);
 }
 
 // assert page title
@@ -57,6 +70,18 @@ var pauseSleep = function(page, timeSleep) {
   return page.pause(timeSleep);
 }
 
+// expect to be visible
+var expectVisible = function(page,elementSelector){
+  return page.expect.element(elementSelector).to.be.visible;
+}
+
+// choose an option from dropdown list
+var chooseOptionValue = function(page,elementSelector,selectedOption){
+  return page.click(elementSelector,()=>{
+    page.click("option[value="+selectedOption+"]");
+  })
+}
+
 module.exports = {
   setURL: setURL,
   clickElement: clickElement,
@@ -66,6 +91,10 @@ module.exports = {
   getStringText: getStringText,
   assertPageTitle: assertPageTitle,
   pauseSleep: pauseSleep,
-  scrollToElement: scrollToElement
+  scrollToElement: scrollToElement,
+  setValueElementThenEnter: setValueElementThenEnter,
+  expectVisible: expectVisible,
+  chooseOptionValue: chooseOptionValue,
+  assertContainsText: assertContainsText
   // scrollPage: scrollPage
 }
