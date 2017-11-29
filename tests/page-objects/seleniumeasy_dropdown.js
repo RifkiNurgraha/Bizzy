@@ -21,7 +21,7 @@ var home = {
     verifySelectedDay: function(selectedDay) {
         base.waitElementVisible(this,home.elements.dayDisplay);
         base.expectVisible(this,home.elements.dayDisplay);
-        return base.assertStringTextFromElement(this, home.elements.dayDisplay, selectedDay);
+        return base.assertContainsText(this, home.elements.dayDisplay, selectedDay);
     },
   }]
 }

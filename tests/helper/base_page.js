@@ -77,9 +77,8 @@ var expectVisible = function(page,elementSelector){
 
 // choose an option from dropdown list
 var chooseOptionValue = function(page,elementSelector,selectedOption){
-  var optionValue = "option[value="+selectedOption+"]";
   return page.click(elementSelector,()=>{
-    page.click(optionValue);
+    page.click("option[value="+selectedOption+"]");
   })
 }
 
@@ -96,6 +95,6 @@ module.exports = {
   setValueElementThenEnter: setValueElementThenEnter,
   expectVisible: expectVisible,
   chooseOptionValue: chooseOptionValue,
-  assertStringTextFromElement: assertStringTextFromElement
+  assertContainsText: assertContainsText
   // scrollPage: scrollPage
 }
