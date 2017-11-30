@@ -2,9 +2,9 @@
   "scripts": {
     "postinstall": "node modules_config_check.js",
     "test": "npm run test-docker-chrome",
-    "test-chrome": "node_modules/nightwatch/bin/nightwatch --config nightwatch_chrome.conf.js --env chrome",
+    "test-chrome": "node_modules/nightwatch/bin/nightwatch --config nightwatch_chrome.conf.js --env chrome --tag phoenix",
     "test-firefox": "node_modules/nightwatch/bin/nightwatch --config nightwatch_firefox.conf.js --env firefox",
-    "test-docker-chrome": "node_modules/nightwatch/bin/nightwatch --config docker-chrome-conf.js",
+    "test-docker-chrome": "node_modules/nightwatch/bin/nightwatch --config docker-chrome-conf.js --tag phoenix",
     "test-docker-firefox": "node_modules/nightwatch/bin/nightwatch --config docker-firefox-conf.js",
     "report-chrome": "node reports/chrome/create-html-report-chrome.js",
     "report-firefox": "node reports/firefox/create-html-report-firefox.js",

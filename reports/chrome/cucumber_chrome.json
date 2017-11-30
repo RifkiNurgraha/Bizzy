@@ -1,29 +1,21 @@
 [
   {
     "keyword": "Feature",
-    "name": "Check Bizzy pages through link text",
+    "name": "Check Bizzy Phoenix Template",
     "line": 1,
-    "id": "check-bizzy-pages-through-link-text",
+    "id": "check-bizzy-phoenix-template",
     "tags": [],
-    "uri": "tests/features/bizzy-pages-check.feature",
+    "uri": "tests/features/phoenix-template.feature",
     "elements": [
       {
-        "id": "check-bizzy-pages-through-link-text;assertion-bizzy-select-page",
+        "id": "check-bizzy-phoenix-template;check-phoenix-tittle",
         "keyword": "Scenario",
-        "line": 9,
-        "name": "Assertion Bizzy Select page",
+        "line": 4,
+        "name": "Check Phoenix Tittle",
         "tags": [
           {
-            "name": "@desktop",
-            "line": 8
-          },
-          {
-            "name": "@home",
-            "line": 8
-          },
-          {
-            "name": "@bizzyselect",
-            "line": 8
+            "name": "@phoenix",
+            "line": 3
           }
         ],
         "type": "scenario",
@@ -31,402 +23,40 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
-            "name": "user is at homepage",
+            "line": 5,
+            "name": "user is at phoenix homepage",
             "match": {
-              "location": "tests/step_definitions/home/home_steps.js:7"
+              "location": "tests/step_definitions/phoenix_template_steps.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 5596
+              "duration": 5790
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 5,
-            "name": "the homepage title is correct",
+            "line": 6,
+            "name": "the phoenix homepage is correct",
             "match": {
-              "location": "tests/step_definitions/home/home_steps.js:23"
+              "location": "tests/step_definitions/phoenix_template_steps.js:10"
             },
             "result": {
               "status": "failed",
-              "duration": 87,
-              "error_message": "\n    at Object.assertPageTitle (/vagrant/nightwatch-mocha-poc-automation/tests/helper/base_page.js:38:22)\n    at Proxy.assertPageTitleBizzy (/vagrant/nightwatch-mocha-poc-automation/tests/page-objects/home_page.js:38:19)\n    at World.Then (/vagrant/nightwatch-mocha-poc-automation/tests/step_definitions/home/home_steps.js:24:20)"
-            },
-            "embeddings": [
-              {
-                "data": "iVBORw0KGgoAAAANSUhEUgAABBAAAANrCAYAAAD/J2t8AAAVD0lEQVR4nO3YMQHAIBDAwFL/nh8HZIThTkHmrJmZDwAAAODgvx0AAAAAvM9AAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAADSBgHFCtKay2v0AAAAAElFTkSuQmCC",
-                "media": {
-                  "type": "image/png"
-                }
-              }
-            ]
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 6,
-            "name": "user scroll to the bottom",
-            "match": {
-              "location": "tests/step_definitions/home/home_steps.js:11"
-            },
-            "result": {
-              "status": "skipped"
+              "duration": 60308,
+              "error_message": "\n    at Object.assertPageTitle (/vagrant/nightwatch-mocha-poc-automation/tests/helper/base_page.js:47:22)\n    at Proxy.assertPageTittlePhoenixTemplateHomepage (/vagrant/nightwatch-mocha-poc-automation/tests/page-objects/phoenix_template_page.js:22:22)\n    at World.Then (/vagrant/nightwatch-mocha-poc-automation/tests/step_definitions/phoenix_template_steps.js:11:20)"
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 10,
-            "name": "user click on Bizzy Select",
+            "line": 7,
+            "name": "the content header is correct",
             "match": {
-              "location": "tests/step_definitions/home/home_steps.js:15"
+              "location": "tests/step_definitions/phoenix_template_steps.js:13"
             },
             "result": {
               "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "user will see Bizzy Select page",
-            "match": {
-              "location": "tests/step_definitions/select/select_steps.js:7"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          }
-        ]
-      },
-      {
-        "id": "check-bizzy-pages-through-link-text;assertion-bizzy-benefit-page",
-        "keyword": "Scenario",
-        "line": 14,
-        "name": "Assertion Bizzy Benefit page",
-        "tags": [
-          {
-            "name": "@desktop",
-            "line": 13
-          },
-          {
-            "name": "@home",
-            "line": 13
-          },
-          {
-            "name": "@bizzybenefit",
-            "line": 13
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "user is at homepage",
-            "match": {
-              "location": "tests/step_definitions/home/home_steps.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 223
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 5,
-            "name": "the homepage title is correct",
-            "match": {
-              "location": "tests/step_definitions/home/home_steps.js:23"
-            },
-            "result": {
-              "status": "failed",
-              "duration": 83,
-              "error_message": "\n    at Object.assertPageTitle (/vagrant/nightwatch-mocha-poc-automation/tests/helper/base_page.js:38:22)\n    at Proxy.assertPageTitleBizzy (/vagrant/nightwatch-mocha-poc-automation/tests/page-objects/home_page.js:38:19)\n    at World.Then (/vagrant/nightwatch-mocha-poc-automation/tests/step_definitions/home/home_steps.js:24:20)"
-            },
-            "embeddings": [
-              {
-                "data": "iVBORw0KGgoAAAANSUhEUgAABBAAAANrCAYAAAD/J2t8AAAVD0lEQVR4nO3YMQHAIBDAwFL/nh8HZIThTkHmrJmZDwAAAODgvx0AAAAAvM9AAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAACSgQAAAAAkAwEAAABIBgIAAACQDAQAAAAgGQgAAABAMhAAAACAZCAAAAAAyUAAAAAAkoEAAAAAJAMBAAAASAYCAAAAkAwEAAAAIBkIAAAAQDIQAAAAgGQgAAAAAMlAAAAAAJKBAAAAACQDAQAAAEgGAgAAAJAMBAAAACAZCAAAAEAyEAAAAIBkIAAAAADJQAAAAADSBgHFCtKay2v0AAAAAElFTkSuQmCC",
-                "media": {
-                  "type": "image/png"
-                }
-              }
-            ]
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 6,
-            "name": "user scroll to the bottom",
-            "match": {
-              "location": "tests/step_definitions/home/home_steps.js:11"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 15,
-            "name": "user click on Bizzy Benefit",
-            "match": {
-              "location": "tests/step_definitions/home/home_steps.js:19"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 16,
-            "name": "user will see Bizzy Benefit page",
-            "match": {
-              "location": "tests/step_definitions/benefit/benefit_steps.js:7"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "keyword": "Feature",
-    "name": "Check Facebook home page",
-    "line": 1,
-    "id": "check-facebook-home-page",
-    "tags": [],
-    "uri": "tests/features/facebook-pages-check.feature",
-    "elements": [
-      {
-        "id": "check-facebook-home-page;assertion-facebook-home-page",
-        "keyword": "Scenario",
-        "line": 7,
-        "name": "Assertion Facebook home page",
-        "tags": [
-          {
-            "name": "@desktop",
-            "line": 6
-          },
-          {
-            "name": "@home",
-            "line": 6
-          },
-          {
-            "name": "@facebook",
-            "line": 6
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "user is at facebook homepage",
-            "match": {
-              "location": "tests/step_definitions/home/facebook_steps.js:6"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 15260
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "user will see facebook page",
-            "match": {
-              "location": "tests/step_definitions/home/facebook_steps.js:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 910
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "keyword": "Feature",
-    "name": "Check Instagram home page",
-    "line": 1,
-    "id": "check-instagram-home-page",
-    "tags": [],
-    "uri": "tests/features/instagram-pages-check.feature",
-    "elements": [
-      {
-        "id": "check-instagram-home-page;assertion-instagram-home-page",
-        "keyword": "Scenario",
-        "line": 7,
-        "name": "Assertion Instagram home page",
-        "tags": [
-          {
-            "name": "@desktop",
-            "line": 6
-          },
-          {
-            "name": "@home",
-            "line": 6
-          },
-          {
-            "name": "@instagram",
-            "line": 6
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "user is at instagram homepage",
-            "match": {
-              "location": "tests/step_definitions/home/instagram_steps.js:6"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 10429
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "user will see instagram page",
-            "match": {
-              "location": "tests/step_definitions/home/instagram_steps.js:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 312
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "keyword": "Feature",
-    "name": "Check Twitter home page",
-    "line": 1,
-    "id": "check-twitter-home-page",
-    "tags": [],
-    "uri": "tests/features/linkedin-pages-check.feature",
-    "elements": [
-      {
-        "id": "check-twitter-home-page;assertion-twitter-home-page",
-        "keyword": "Scenario",
-        "line": 7,
-        "name": "Assertion Twitter home page",
-        "tags": [
-          {
-            "name": "@desktop",
-            "line": 6
-          },
-          {
-            "name": "@home",
-            "line": 6
-          },
-          {
-            "name": "@twitter",
-            "line": 6
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "user is at twitter homepage",
-            "match": {
-              "location": "tests/step_definitions/home/twitter_steps.js:6"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 16697
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "user will see twitter page",
-            "match": {
-              "location": "tests/step_definitions/home/twitter_steps.js:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 127
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "keyword": "Feature",
-    "name": "Check LinkedIn home page",
-    "line": 1,
-    "id": "check-linkedin-home-page",
-    "tags": [],
-    "uri": "tests/features/twitter-pages-check.feature",
-    "elements": [
-      {
-        "id": "check-linkedin-home-page;assertion-linkedin-home-page",
-        "keyword": "Scenario",
-        "line": 7,
-        "name": "Assertion LinkedIn home page",
-        "tags": [
-          {
-            "name": "@desktop",
-            "line": 6
-          },
-          {
-            "name": "@home",
-            "line": 6
-          },
-          {
-            "name": "@linkedin",
-            "line": 6
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "user is at linkedin homepage",
-            "match": {
-              "location": "tests/step_definitions/home/linkedin_steps.js:6"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 10495
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "user will see linkedin page",
-            "match": {
-              "location": "tests/step_definitions/home/linkedin_steps.js:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 92
             }
           }
         ]

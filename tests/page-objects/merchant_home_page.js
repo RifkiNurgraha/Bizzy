@@ -1,7 +1,7 @@
 const env = require('dotenv').config();
 var base = require('./../helper/base_page.js');
 
-var home = {
+var MerchantHome = {
   url: function set_url() {
     var url = process.env.BASE_URL_MERCHANT;  
     console.log(url);
@@ -24,15 +24,15 @@ var home = {
       // return this;
     },
     clickRegisterButton: function() {
-        return base.clickElement(this, home.elements.registerButton);
+        return base.clickElement(this, MerchantHome.elements.registerButton);
     },
-    scrollDownHomePage: function() {
-      return this.getLocationInView(home.elements.sslImage);
-    },
-    assertPageTitleBizzy: function() {
-      return base.assertPageTitle(this, home.elements.pageTitleMerchant);
+    // scrollDownHomePage: function() {
+    //   return this.getLocationInView(MerchantHome.elements.sslImage);
+    // },
+    assertPageTitleMerchantCenter: function() {
+      return base.assertPageTitle(this, MerchantHome.elements.pageTitleMerchant);
     }
   }]
 }
 
-module.exports = home;
+module.exports = MerchantHome;

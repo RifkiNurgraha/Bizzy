@@ -5,7 +5,7 @@ var browser = client.page.home_page();
 defineSupportCode(({Given, Then, When}) => {
 
   Given(/^user is at homepage$/, () => {
-    return browser.navigateToHomePage();
+    return browser.navigateToHomePage(); 
   });
 
   When(/^user scroll to the bottom$/, () => {
@@ -30,6 +30,7 @@ defineSupportCode(({Given, Then, When}) => {
 
   Then(/^user will see "([^"]*)" page$/, (pages) => {
     return browser.assertPageTitleBizzyBenefit(pages);
+
   });
 
 });

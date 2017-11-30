@@ -30,36 +30,32 @@ var home = {
       // });
       // return this;
     },
-    scrollDownHomePage: function() {
-      return this.getLocationInView(home.elements.sslImage);
-    },
-    assertPageTitleMerchantRegister: function() {
+    assertPageTitleMerchantRegistration: function() {
       return base.assertPageTitle(this, home.elements.pageTitleMerchantRegister);
     },
     clickRegisterButton: function() {
       return base.clickElement(this, home.elements.registerButton);
     },
-    setValueFirstName: function() {
-      return base.setValueElement(this, home.elements.firstName, 'Fadly Nightwatch');
+    setValueMerchantRegistration: function(text) {
+      if (text == 'firstName') {
+        return base.setValueElement(this, home.elements.firstName, 'Fadlyy');
+      } else if (text == 'lastName') {
+        return base.setValueElement(this, home.elements.lastName, 'Mahendra');
+      } else if (text == 'email') {
+        return base.setValueElement(this, home.elements.email, 'night1@ildav.com');
+      } else if (text == 'password') {
+        return base.setValueElement(this, home.elements.password, 'Merchant123');
+      } else if (text == 'passwordConfirm') {
+        return base.setValueElement(this, home.elements.passwordConfirm, 'Merchant123');
+      } else if (text == 'mobilePhone') {
+        return base.setValueElement(this, home.elements.mobilePhone, '0812838183244');
+      } else if (text == 'jabatan') {
+        return base.setValueElement(this, home.elements.jabatan, 'Sales Manager');
+      }   
     },
-    setValueLasttName: function() {
-      return base.setValueElement(this, home.elements.LastName, 'Mahendra');
-    },
-    setValueEmail: function() {
-      return base.setValueElement(this, home.elements.email, 'auto1@ildav.com');
-    },
-    setValuePassword: function() {
-      return base.setValueElement(this, home.elements.password, 'Merchant123');
-    },
-    setValuePasswordConfirm: function() {
-      return base.setValueElement(this, home.elements.passwordConfirm, 'Merchant123');
-    },
-    setValueMobilePhone: function() {
-      return base.setValueElement(this, home.elements.mobilePhone, '08128381288');
-    },
-    setValueJabatan: function() {
-      return base.setValueElement(this, home.elements.jabatan, 'CSO');
-    },
+    assertPageTitleRegistrationForm: function() {
+      return base.assertPageTitle(this, home.assertPageTitleRegistrationForm);
+    }
   }]
 }
 

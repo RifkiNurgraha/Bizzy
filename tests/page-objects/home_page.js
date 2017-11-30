@@ -27,7 +27,7 @@ var home = {
       }
     },
     clickBizzySelectLinkText: function() {
-      return base.clickElement(this, home.elements.bizzySelectLinkText);
+      return base.clickElement(this, home.elements.bizzySelectLinkText); 
     },
     clickBizzyBenefitLinkText: function() {
       return base.clickEleidment(this, home.elements.bizzyBenefitLinkText);
