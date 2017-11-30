@@ -16,12 +16,13 @@ var home = {
         return this.navigate();
     },
     chooseDay: function(selectedOption) {
-        return base.chooseOptionValue(this,home.elements.dayList,selectedOption);
+        //return base.chooseOptionValue(this,home.elements.dayList,selectedOption);
+        return base.chooseOptionValue(this,'@dayList',selectedOption);
     },
     verifySelectedDay: function(selectedDay) {
-        base.waitElementVisible(this,home.elements.dayDisplay);
-        base.expectVisible(this,home.elements.dayDisplay);
-        return base.assertContainsText(this, home.elements.dayDisplay, selectedDay);
+        base.waitElementVisible(this,'@dayDisplay');
+        base.expectVisible(this,'@dayDisplay');
+        return base.assertContainsText(this, '@dayDisplay', selectedDay);
     },
   }]
 }
