@@ -1,6 +1,7 @@
 const seleniumServerPath = './node_modules/selenium-server/lib/runner/selenium-server-standalone-3.4.0.jar';
 const chromedriverPath = './node_modules/chromedriver/lib/chromedriver/chromedriver';
 const geckodriverPath = './node_modules/geckodriver/geckodriver';
+const ghostdriverPath = './node_modules/phantomjs/bin/phantomjs';
 const cmd = require('node-cmd');
 
 var checkChromeDriver = function() {
@@ -23,6 +24,18 @@ var checkGeckoDriver = function() {
       downloadDriver('geckodriver');
     } else {
       console.log('Geckodriver is available at: ' + geckodriverPath);
+    }
+  });
+};
+
+var checkPhantomJSDriver = function() {
+  console.log('Checking PhantomJS Ghostdriver');
+  require('fs').stat(ghostdriverPath, function (err, stat) {
+    if (err || !stat || stat.size < 1) {
+      console.log('Downloading Ghostdriver');
+      downloadDriver('phantomjs');
+    } else {
+      console.log('Ghostdriver is available at: ' + ghostdriverPath);
     }
   });
 };
@@ -55,3 +68,4 @@ var downloadDriver = function(modules) {
 checkChromeDriver();
 checkGeckoDriver();
 checkSeleniumServer();
+checkPhantomJSDriver();
