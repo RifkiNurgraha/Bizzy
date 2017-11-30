@@ -9,7 +9,7 @@ var facebookHome = {
     },
     testData: {
       gratisText: 'Gratis. Cukup pilih jenis Halaman untuk mulai membuatnya.',
-      pageTitleFacebook: 'Facebook - Masuk atau Dafta',
+      pageTitleFacebook: 'Facebook - Masuk atau Daftar',
       pageTitleFacebookHalaman: 'Buat Halaman | Facebook',
       emailData: process.env.FACEBOOK_USERNAME,
       passData: process.env.FACEBOOK_PASSWORD,
