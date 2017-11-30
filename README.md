@@ -1,16 +1,47 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
 ### What is this repository for? ###
 
-This is POC repo for NightwatchJS web automation using BDD and page object
+This is POC repo for NightwatchJS and Mocha API/web automation using BDD and page object
 
 ### How do I get set up? ###
 
-1. Install latest NVM for Node: https://www.liquidweb.com/kb/how-to-install-nvm-node-version-manager-for-node-js-on-ubuntu-12-04-lts/
-2. Install latest Node: https://www.liquidweb.com/kb/how-to-install-node-js-via-nvm-node-version-manager-on-ubuntu-14-04-lts/
-3. Clone this repo
-4. Install all dependencies: nmp install
-5. Run test: npm run test-chrome or npm run test-firefox
-6. Run report: npm run report-chrome or npm run report-chrome
+**1.** Install latest NVM and Node: https://bizzyid.atlassian.net/wiki/spaces/QE/pages/129007743/Updating+Node.js+Version+using+NVM
+
+**2.** Install firefox for ubuntu:
+```sh
+sudo apt-get install firefox
+```
+
+**3.** Install chrome for ubuntu:
+```sh
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+sudo apt-get update
+sudo apt-get install google-chrome-stable
+```
+
+**4.** Clone this repo
+
+**5.** Install all dependencies:
+```sh
+nmp install
+```
+
+**6.** Run test:
+```sh
+npm run test-docker-chrome
+or
+npm run test-docker-firefox
+or
+npm run test-chrome
+or
+npm run test-firefox
+```
+
+**7.** Run report:
+```sh
+npm run report-chrome
+or
+npm run report-chrome
+```

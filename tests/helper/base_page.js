@@ -1,9 +1,8 @@
 // set and acccess set_url
 var setURL = function(baseURL) {
-  var url = process.env.BASE_URL_FACEBOOK;
-  console.log('====================');
-  console.log('Accessing ' + baseURL);
-  console.log('====================');
+  console.log('========================================');
+  console.log('|| Accessing ' + baseURL + ' ||');
+  console.log('========================================');
   return baseURL;
 }
 
