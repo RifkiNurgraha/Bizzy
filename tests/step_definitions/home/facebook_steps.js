@@ -11,7 +11,6 @@ Then(/^user will see facebook page$/, () => {
 });
 
 When(/^user click "([^"]*)" button$/, (button) => {
-  // return browser.clickBuatHalaman();
   return browser.clickButtonFacebookHome(button);
 });
 
@@ -21,16 +20,12 @@ Then(/^user will see facebook halaman page$/, () => {
 
 Then(/^user will see text gratis$/, () => {
   return browser.assertGratisText();
-})
+});
 
 When(/^user fill username and password$/, () => {
   return browser.setUserPass();
-})
-//
-// When(/^user click Login button$/, () => {
-//   return browser.clickLogin();
-// })
+});
 
 Then(/^user will see user page$/, () => {
   return browser.assertUserPage();
-})
+});

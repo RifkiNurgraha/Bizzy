@@ -29,7 +29,7 @@ defineSupportCode(({Given, Then, When}) => {
   });
 
   Then(/^user will see "([^"]*)" page$/, (pages) => {
-    return browser.assertPageTitleBizzyBenefit(pages);
+    return browser.assertPageTitleBizzyPages(pages);
   });
 
 });

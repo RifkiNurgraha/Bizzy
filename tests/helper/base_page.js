@@ -1,9 +1,8 @@
 // set and acccess set_url
 var setURL = function(baseURL) {
-  var url = process.env.BASE_URL_FACEBOOK;
-  console.log('====================');
-  console.log('Accessing ' + baseURL);
-  console.log('====================');
+  console.log('========================================');
+  console.log('|| Accessing ' + baseURL + ' ||');
+  console.log('========================================');
   return baseURL;
 }
 
@@ -55,6 +54,12 @@ var assertContainsText = function(page, elementSelector, expectedText){
   return page.assert.containsText(elementSelector,expectedText);
 }
 
+// check if the given element equals the specific text
+var expectEqualsTextFromElement = function(page,elementSelector, expectedText){
+  waitElementVisible(page, elementSelector);
+  return page.expect.element(elementSelector).text.to.equal(expectedText);
+}
+
 // assert page title
 var assertPageTitle = function(page, elementSelector) {
   return page.assert.title(elementSelector);
@@ -82,6 +87,10 @@ var chooseOptionValue = function(page,elementSelector,selectedOption){
   })
 }
 
+var expectElementSelected = function(page,elementSelector){
+  return page.expect.element(elementSelector).to.be.selected;
+}
+
 module.exports = {
   setURL: setURL,
   clickElement: clickElement,
@@ -95,6 +104,8 @@ module.exports = {
   setValueElementThenEnter: setValueElementThenEnter,
   expectVisible: expectVisible,
   chooseOptionValue: chooseOptionValue,
-  assertContainsText: assertContainsText
+  assertContainsText: assertContainsText,
+  expectElementSelected: expectElementSelected,
+  expectEqualsTextFromElement: expectEqualsTextFromElement
   // scrollPage: scrollPage
 }

@@ -1,0 +1,182 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Login Merchant home page",
+    "line": 1,
+    "id": "login-merchant-home-page",
+    "tags": [],
+    "uri": "tests/features/merchant-login-pages-check.feature",
+    "elements": [
+      {
+        "id": "login-merchant-home-page;login-using-valid-account",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Login using valid account",
+        "tags": [
+          {
+            "name": "@merchant",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user is at merchant login page",
+            "match": {
+              "location": "tests/step_definitions/home/merchant_login_step.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16762
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "user will see merchant login page",
+            "match": {
+              "location": "tests/step_definitions/home/merchant_login_step.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "user enter email and password",
+            "match": {
+              "location": "tests/step_definitions/home/merchant_login_step.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "user click \"masuk\" button in Login page",
+            "match": {
+              "location": "tests/step_definitions/home/merchant_login_step.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "user will go to dashboard",
+            "match": {
+              "location": "tests/step_definitions/home/merchant_login_step.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3553
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Check Merchant home page",
+    "line": 1,
+    "id": "check-merchant-home-page",
+    "tags": [],
+    "uri": "tests/features/merchant-pages-check.feature",
+    "elements": [
+      {
+        "id": "check-merchant-home-page;go-to-login-home-page",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Go to Login home page",
+        "tags": [
+          {
+            "name": "@merchant",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user is at merchant homepage",
+            "match": {
+              "location": "tests/step_definitions/home/merchant_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4945
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "user will see merchant page",
+            "match": {
+              "location": "tests/step_definitions/home/merchant_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 85
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "user click \"login\" button in merchant home",
+            "match": {
+              "location": "tests/step_definitions/home/merchant_steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "user will see login page",
+            "match": {
+              "location": "tests/step_definitions/home/merchant_steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6863
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "user will see text Masuk dengan Akun Bizzy Anda",
+            "match": {
+              "location": "tests/step_definitions/home/merchant_steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
