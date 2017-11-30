@@ -7,7 +7,7 @@ var options = {
         reportSuiteAsScenarios: true,
         launchReport: true,                                         //True for automatically open in browser
         metadata: {
-            "App Version":"1.0.0",
+            "Test Browser":"Firefox",
             "Test Environment": "STAGING",
             "Parallel": "Scenarios",
         }

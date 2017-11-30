@@ -1,4 +1,5 @@
 const env = require('dotenv').config();
+const { matches } = require('z')
 var base = require('./../helper/base_page.js');
 
 var home = {
@@ -20,11 +21,10 @@ var home = {
       return this.navigate();
     },
     clickBizzyLinkText: function(link_text) {
-      if (link_text == 'Bizzy Select') {
-        clickBizzySelectLinkText();
-      } else if (link_text == 'Bizzy Benefit') {
-        clickBizzyBenefitLinkText();
-      }
+      matches(link_text) (
+        (x = 'Bizzy Select') => base.clickElement(this, home.elements.bizzySelectLinkText),
+        (x = 'Bizzy Benefit') => base.clickElement(this, home.elements.bizzyBenefitLinkText)
+      )
     },
     clickBizzySelectLinkText: function() {
       return base.clickElement(this, home.elements.bizzySelectLinkText); 
@@ -33,16 +33,16 @@ var home = {
       return base.clickEleidment(this, home.elements.bizzyBenefitLinkText);
     },
     scrollDownHomePage: function() {
-      return this.getLocationInView(home.elements.sslImage);
+      return base.scrollToElement(this, home.elements.sslImage);
     },
     assertPageTitleBizzy: function() {
       return base.assertPageTitle(this, home.elements.pageTitleBizzy);
     },
     assertPageTitleBizzyPages: function(pages) {
-      if (pages == '') {
-        return base.assertPageTitle(this, home.elements.pageTitleBizzyBenefit);
-      } else if (pages== '') {
+      if (pages == 'Bizzy Select') {
         return base.assertPageTitle(this, home.elements.pageTitleBizzySelect);
+      } else if (pages == 'Bizzy Benefit') {
+        return base.assertPageTitle(this, home.elements.pageTitleBizzyBenefit);
       };
     }
   }]

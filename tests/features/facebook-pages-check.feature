@@ -13,6 +13,5 @@ Scenario: Assertion Facebook home page
 @desktop @home @facebook @facebooklogin
 Scenario: login Facebook home page
   When user fill username and password
-    And user click "Login" button
   Then user will see user page
    
