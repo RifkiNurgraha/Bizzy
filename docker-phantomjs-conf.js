@@ -4,9 +4,9 @@ require('nightwatch-cucumber')({
   nightwatchOutput: true,
   cucumberArgs: [
     // '--require', 'tests/helper/hooks.js',
-    '--require', 'tests/step_definitions',                          //include step_definitions folder
-    '--format', 'json:reports/firefox/cucumber_firefox.json',       //include cucumber.json folder
-    '--format', 'node_modules/cucumber-pretty',                     //print nice looking cucumber in console
+    '--require', 'tests/step_definitions',                              //include step_definitions folder
+    '--format', 'json:reports/phantomjs/cucumber_phantomjs.json',       //include cucumber.json folder
+    '--format', 'node_modules/cucumber-pretty',                         //print nice looking cucumber in console
     'tests/features']
 });
 
@@ -24,15 +24,16 @@ module.exports = {
     default : {
       launch_url : process.env.BASE_URL,
       selenium_port  : 4443,
-      selenium_host  : "172.17.0.1",
+      selenium_host  : '172.17.0.1',
       screenshots : {
         enabled : true,
         on_failure : true,
         on_error : false,
-        path : "screenshots"
+        path : 'screenshots'
       },
       desiredCapabilities: {
-         browserName: "firefox",
+         browserName: 'phantomjs',
+         'phantomjs.page.settings.userAgent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
       }
     }
   }

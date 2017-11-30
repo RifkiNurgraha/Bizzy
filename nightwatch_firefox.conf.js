@@ -6,9 +6,9 @@ require('nightwatch-cucumber')({
   nightwatchOutput: true,
   cucumberArgs: [
     // '--require', 'tests/helper/hooks.js',
-    '--require', 'tests/step_definitions',                  //include step_definitions folder
+    '--require', 'tests/step_definitions',                          //include step_definitions folder
     '--format', 'json:reports/firefox/cucumber_firefox.json',       //include cucumber.json folder
-    '--format', 'node_modules/cucumber-pretty',             //print nice looking cucumber in console
+    '--format', 'node_modules/cucumber-pretty',                     //print nice looking cucumber in console
     'tests/features']
 });
 
