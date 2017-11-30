@@ -107,5 +107,4 @@ module.exports = {
   assertContainsText: assertContainsText,
   expectElementSelected: expectElementSelected,
   expectEqualsTextFromElement: expectEqualsTextFromElement
-  // scrollPage: scrollPage
 }
