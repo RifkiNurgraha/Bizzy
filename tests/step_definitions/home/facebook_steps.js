@@ -3,8 +3,8 @@ const {Given, Then, When} = require('cucumber');
 const browser = client.page.facebook_home_page();
 
 Given(/^user is at facebook homepage$/, () => {
-    return browser.navigateToFacebookHomePage();
-  });
+  return browser.navigateToFacebookHomePage();
+});
 
 Then(/^user will see facebook page$/, () => {
   return browser.assertPageTitleFacebook();
