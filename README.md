@@ -32,6 +32,10 @@ sudo apt-get install phantomjs
 ```sh
 nmp install
 ```
+Try this if you found any on_error:
+```sh
+nmp install --no-bin-links
+```
 
 **6.** Run test:
 ```sh
