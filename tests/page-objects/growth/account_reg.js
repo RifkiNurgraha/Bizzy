@@ -11,19 +11,19 @@ var accountReg = {
     },
     commands: [{
         inputFirstName: function(firstName){
-            return base.setValueElement(this,accountReg.elements.txtFirstName,firstName);
+            return base.setValueElement(this,'@txtFirstName',firstName);
         },
         inputLastName: function(lastName){
-            return base.setValueElement(this,accountReg.elements.txtLastName,lastName);
+            return base.setValueElement(this,'@txtLastName',lastName);
         },
         inputOfficeEmail: function(officeEmail){
-            return base.setValueElement(this,accountReg.elements.txtOfficeEmail,officeEmail);
+            return base.setValueElement(this,'@txtOfficeEmail',officeEmail);
         },
         inputPassword: function(password){
-            return base.setValueElement(this,accountReg.elements.txtPassword,password);
+            return base.setValueElement(this,'@txtPassword',password);
         },
         clickCreateAccountBtn: function(){
-            return base.clickElement(this,btnCreateAccount);
+            return base.clickElement(this,'@btnCreateAccount');
         }
     }]
 }

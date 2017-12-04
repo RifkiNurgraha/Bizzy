@@ -11,7 +11,7 @@ var accountVer = {
     },
     commands: [{
         clickBtnVerify: function(){
-            return base.clickElement(this,btnVerify)
+            return base.clickElement(this,'@btnVerify')
         }
     }]
 }
