@@ -3,11 +3,11 @@ var base = require('./../../helper/base_page.js');
 
 var businessProfileBasic = {
     elements:{
-        listFirstLabel:'ts-dropdown-firstlabel',
-        txtCompanyName:'ts-textfield-companyname',
-        listLastLabel:'ts-dropdown-lastlabel',
-        listCompanyType:'ts-dropdown-companytype',
-        listNumberOfEmployees:'ts-dropdown-numberofemployees'
+        listFirstLabel:'#ts-dropdown-firstlabel',
+        txtCompanyName:'#ts-textfield-companyname',
+        dropdownLastLabel:'#ts-dropdown-lastlabel',
+        dropdownCompanyType:'#ts-dropdown-companytype',
+        dropdownNumberOfEmployees:'#ts-dropdown-numberofemployees'
     },
     commands:[{
         selectFirstLabel:function(optionValue){
