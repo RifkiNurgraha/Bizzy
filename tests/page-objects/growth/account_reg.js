@@ -1,3 +1,5 @@
+import { read } from 'fs';
+
 const env = require('dotenv').config();
 var base = require('./../../helper/base_page.js');
 
@@ -7,7 +9,12 @@ var accountReg = {
        txtLastName:'#ts-textfield-lastname',
        txtOfficeEmail:'#ts-textfield-officeemail',
        txtPassword:'#ts-textfield-password',
-       btnCreateAccount:'#ts-button-createaccount'
+       btnCreateAccount:'#ts-button-createaccount',
+       eyeOpen:'',
+       linkTermOfService:'#ts-urllink-termofservice',
+       linkPrivacyPolicy:'#ts-urllink-privacypolicy',
+       emailChange:'#ts-text-changeemail',
+       btnSaveAndSendChangeEmail:'#ts-button-saveandsend'
     },
     commands: [{
         inputFirstName: function(firstName){
@@ -24,6 +31,24 @@ var accountReg = {
         },
         clickCreateAccountBtn: function(){
             return base.clickElement(this,'@btnCreateAccount');
+        },
+        clickEyeOpen: function(){
+            return base.clickElement(this,'@eyeOpen');
+        },
+        clickLinkTermOfService: function(){
+            return base.clickElement(this,'@linkTermOfService');
+        },
+        clickPrivacyPolicy: function(){
+            return base.clickElement(this,'@linkPrivacyPolicy');
+        },
+        clickChangeEmail: function(){
+            return base.clickElement(this,'@emailChange');
+        },
+        inputChangeEmail: function(email){
+            return base.setValueElement(this,'@changeEmail',email)
+        },
+        clickSaveAndSendEmailChange: function(){
+            return base.clickElement(this,'@btnSaveAndSendChangeEmail');
         }
     }]
 }
