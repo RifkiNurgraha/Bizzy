@@ -1,5 +1,5 @@
 const seleniumServer = require('selenium-server');  //selenium server package
-var phantomjs = require('phantomjs');               //selenium phantomsjs driver
+var phantomjs = require('phantomjs-prebuilt')       //selenium phantomsjs driver
 const env = require('dotenv').config();
 
 require('nightwatch-cucumber')({
@@ -42,7 +42,7 @@ module.exports = {
         browserName: 'phantomjs',
         javascriptEnabled : true,
         acceptSslCerts : true,
-        'phantomjs.binary.path': './node_modules/phantomjs/bin/phantomjs',
+        'phantomjs.binary.path': './node_modules/phantomjs-prebuilt/bin/phantomjs',
         'phantomjs.page.settings.userAgent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
       }
     }
