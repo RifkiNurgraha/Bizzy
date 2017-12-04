@@ -24,11 +24,11 @@ var home = {
       return base.expectElementSelected(this,home.elements.sexOption+"[value="+choosenSex+"]");
     },
     clickGetCheckedValueButton: function() {
-      return base.clickElement(this,home.elements.checkValueButton);
+      return base.clickElement(this,'@checkValueButton');
     },
     sexTextDisplayed: function(choosenSex) {
       var expectedText= "Radio button '"+choosenSex+"' is checked";
-      return base.expectEqualsTextFromElement(this,home.elements.textDisplayed,expectedText);
+      return base.expectEqualsTextFromElement(this,'@textDisplayed',expectedText);
     }
   }]
 }
