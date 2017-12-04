@@ -17,11 +17,32 @@ var businessProfileAddress = {
         inputBuildingName:function(buildingName){
             return base.setValueElement(this,'@txtBuildingName',buildingName)
         },
+        inputStreetName:function(streetName){
+            return base.setValueElement(this,'@txtStreetName',streetName)
+        },
         chooseProvince:function(provinceOption){
             return base.chooseOptionValue(this,'@dropdownProvince',provinceOption)
         },
+        chooseCity:function(cityOption){
+            return base.chooseOptionValue(this,'@dropdownCity',cityOption)
+        },
+        chooseDistric:function(districOption){
+            return base.chooseOptionValue(this,'@dropdownDistric',districOption)
+        },
+        chooseKelurahan:function(kelurahanOption){
+            return base.chooseOptionValue(this,'@dropdownKelurahan',kelurahanOption)
+        },
+        showRegionCode:function(){
+            return base.getStringText(this,'@txtRegionCode')
+        },
+        inputPhone:function(phone){
+            return base.setValueElement(this,'@txtPhone',phone)
+        },
         clickBtnKembali:function(){
             return base.clickElement(this,'@btnKembali')
+        },
+        clickBtnSaveAndContinue:function(){
+            return base.clickElement(this,'@btnSaveAndContinue')
         }
 
     }]
