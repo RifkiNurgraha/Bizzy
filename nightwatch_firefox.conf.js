@@ -30,8 +30,7 @@ module.exports = {
     port: 4444
   },
   test_settings: {
-    default: {                                      //default test settings
-      launch_url: process.env.BASE_URL,
+    firefox: {
       selenium_port: 4444,
       selenium_host: '127.0.0.1',
       screenshots : {
@@ -39,8 +38,6 @@ module.exports = {
         on_failure : true,
         path: 'screenshots'
       },
-    },
-    firefox: {
       desiredCapabilities: {
         browserName: 'firefox',
         javascriptEnabled: true,
