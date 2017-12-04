@@ -3,11 +3,11 @@ var base = require('./../../helper/base_page.js');
 
 var accountReg = {
     elements: {
-       txtFirstName:'',
-       txtLastName:'',
-       txtOfficeEmail:'',
-       txtPassword:'',
-       btnCreateAccount:''
+       txtFirstName:'ts-textfield-firstname',
+       txtLastName:'ts-textfield-lastname',
+       txtOfficeEmail:'ts-textfield-officeemail',
+       txtPassword:'ts-textfield-password',
+       btnCreateAccount:'ts-button-createaccount'
     },
     commands: [{
         inputFirstName: function(firstName){

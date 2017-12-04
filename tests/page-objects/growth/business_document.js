@@ -5,12 +5,12 @@ var base = require('./../../helper/base_page.js');
 
 var businessDoc = {
     elements:{
-        txtNPWP:'',
+        txtNPWP:'ts-textfield-npwp',
         fileNPWP:'',
         fileSIUP:'',
         txtExpiredSIUP:'',
-        btnBack:'',
-        btnSaveAndCont:''
+        btnBack:'ts-button-back',
+        btnSaveAndCont:'ts-button-savecontinue'
     },
     commands:[{
         inputNPWPNumber:function(npwpNumber){
