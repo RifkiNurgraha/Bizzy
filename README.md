@@ -50,6 +50,8 @@ or
 npm run test-firefox
 or
 npm run test-phantomjs
+or
+npm run test-api
 ```
 
 **7.** Run report:
