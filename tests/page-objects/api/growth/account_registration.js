@@ -8,9 +8,9 @@ var registrationPath = {
     activate : "/registration/activate"
 };
 
-var postRegisterAccount = function(body,response){
+var postRegisterAccount = function(customCase,body,response){
     describe('Account Registration', function(){
-        it('cannot register using existing email', function(done){
+        it(customCase, function(done){
             api.post(registrationPath.new)
             .set('Content-Type','application/json')
             .send(body)
