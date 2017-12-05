@@ -9,7 +9,7 @@ var businessProfileAddress = {
         dropDownDistric:'#ts-dropdown-distric',
         dropdownKelurahan: '#ts-dropdown-kelurahan',
         txtRegionCode: '#ts-textfield-regioncode',
-        txtPhone:'#ts-textfield-phone',
+        txtOfficePhone:'#ts-textfield-officephone',
         btnKembali:'#ts-button-kembali',
         btnSaveAndContinue:'#ts-button-saveandcontinue',
     },
@@ -32,11 +32,11 @@ var businessProfileAddress = {
         chooseKelurahan:function(kelurahanOption){
             return base.chooseOptionValue(this,'@dropdownKelurahan',kelurahanOption)
         },
-        showRegionCode:function(){
+        verifyRegionCodeDisplayed:function(){
             return base.getStringText(this,'@txtRegionCode')
         },
-        inputPhone:function(phone){
-            return base.setValueElement(this,'@txtPhone',phone)
+        inputOfficePhone:function(officePhone){
+            return base.setValueElement(this,'@txtPhone',officePhone)
         },
         clickBtnKembali:function(){
             return base.clickElement(this,'@btnKembali')
