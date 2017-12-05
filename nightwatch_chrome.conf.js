@@ -24,15 +24,14 @@ module.exports = {
   disable_colors: false,                            //scenarios colors
   selenium: {                                       //selenium settings
     start_process: true,
-    
+
     server_path: seleniumServer.path,
     log_path: 'logs',
     host: '127.0.0.1',
     port: 4444
   },
   test_settings: {
-    default: {                                      //default test settings
-      launch_url: process.env.BASE_URL,
+    chrome: {                                       //chrome settings
       selenium_port: 4444,
       selenium_host: '127.0.0.1',
       screenshots : {
@@ -40,8 +39,6 @@ module.exports = {
         on_failure : true,
         path: 'screenshots'
       },
-    },
-    chrome: {                                       //chrome settins
       desiredCapabilities: {
         browserName: 'chrome',
         javascriptEnabled: true,
@@ -55,7 +52,6 @@ module.exports = {
       },
       selenium: {
         cli_args: {
-
           'webdriver.chrome.driver': chromedriver.path
         }
       }

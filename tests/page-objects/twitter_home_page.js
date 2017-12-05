@@ -1,4 +1,5 @@
 const env = require('dotenv').config();
+const {client} = require('nightwatch-cucumber');
 var base = require('./../helper/base_page.js');
 
 var twitterHome = {
