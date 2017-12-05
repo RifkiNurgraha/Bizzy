@@ -27,9 +27,14 @@ var activatedKey = ({
     "activation_key": "5iylDIINMUq1CrrQzK46ewcMm"
 })
 
+var blankKey = ({
+    "activation_key": ""
+})
+
 module.exports = {
     existingAccountData: existingAccountData,
     newAccountData: newAccountData,
     authenticateData: authenticateData,
-    activatedKey: activatedKey
+    activatedKey: activatedKey,
+    blankKey: blankKey
 }

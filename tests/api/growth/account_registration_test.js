@@ -11,7 +11,8 @@ var registrationPath = {
 var customCase = {
     it1 : 'cannot register using existing email',
     it2 : 'can register using new email',
-    it3 : 'cannot activate using activated key'
+    it3 : 'cannot activate using activated key',
+    it4 : 'cannot activate using blank key'
 }
 
 account.postRegisterationAccount(customCase.it1,registrationPath.new,testData.existingAccountData,function(response1){
@@ -27,6 +28,12 @@ account.postRegisterationAccount(customCase.it2,registrationPath.new,testData.ne
 });
 
 account.postRegisterationAccount(customCase.it3,registrationPath.activate,testData.activatedKey,function(response){
+    expect(response.status).to.equal(200)
+    expect(response.body.success).to.equal(false)
+    expect(response.body.message).to.equal("Kode Aktivasi tidak dikenal/sudah diaktivasi")
+});
+
+account.postRegisterationAccount(customCase.it4,registrationPath.activate,testData.blankKey,function(response){
     expect(response.status).to.equal(200)
     expect(response.body.success).to.equal(false)
     expect(response.body.message).to.equal("Kode Aktivasi tidak dikenal/sudah diaktivasi")
