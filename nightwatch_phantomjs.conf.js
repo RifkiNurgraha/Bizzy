@@ -1,5 +1,5 @@
 const seleniumServer = require('selenium-server');  //selenium server package
-const geckodriver = require('geckodriver');         //selenium firefox driver
+var phantomjs = require('phantomjs');               //selenium phantomsjs driver
 const env = require('dotenv').config();
 
 require('nightwatch-cucumber')({
@@ -7,7 +7,7 @@ require('nightwatch-cucumber')({
   cucumberArgs: [
     // '--require', 'tests/helper/hooks.js',
     '--require', 'tests/step_definitions',                          //include step_definitions folder
-    '--format', 'json:reports/firefox/cucumber_firefox.json',       //include cucumber.json folder
+    '--format', 'json:reports/phantomjs/cucumber_phantomjs.json',   //include cucumber.json folder
     '--format', 'node_modules/cucumber-pretty',                     //print nice looking cucumber in console
     'tests/features']
 });
@@ -40,22 +40,13 @@ module.exports = {
         path: 'screenshots'
       },
     },
-    firefox: {
+    phantomjs: {
       desiredCapabilities: {
-        browserName: 'firefox',
-        javascriptEnabled: true,
-        elementScrollBehavior: 1,
-        marionette: true,
-        'moz:firefoxOptions': {
-          args: [
-            '-headless'
-          ]
-        }
-      },
-      selenium: {
-        cli_args: {
-          'webdriver.gecko.driver': geckodriver.path
-        }
+        browserName: 'phantomjs',
+        javascriptEnabled : true,
+        acceptSslCerts : true,
+        'phantomjs.binary.path': './node_modules/phantomjs/bin/phantomjs',
+        'phantomjs.page.settings.userAgent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
       }
     }
   }

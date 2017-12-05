@@ -25,6 +25,7 @@ var bodyNew = function() {
 
 // POST /customer then GET /customer
 customer.postCustomer(bodyNew(), custString.description, custString.describeIt.checkCreated, 'correct_token', function(response) {
+  c
   expect(response.status).to.equal(200);
   expect(response.body.firstname).to.equal(bodyNew()['data']['customer']['name']);
 });

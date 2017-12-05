@@ -61,9 +61,16 @@ var addItemBody = ({
     "sales_price": 5495
   }
 });
-
+var createBrandBody =({
+  "name" : "abal-abal4"
+});
+var checkDuplicateBrandBody =({
+"message": "Brand Already Exist"
+});
 module.exports = {
   customerBody: customerBody,
   cartNewBody: cartNewBody,
-  addItemBody: addItemBody
+  addItemBody: addItemBody,
+  createBrandBody:createBrandBody,
+  checkDuplicateBrandBody:checkDuplicateBrandBody
 }
