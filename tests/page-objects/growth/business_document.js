@@ -3,12 +3,12 @@ var base = require('./../../helper/base_page.js');
 
 var businessDoc = {
     elements:{
-        txtNPWP:'#ts-textfield-npwp',
+        txtNPWP:'.ts-textfield-npwp',
         fileNPWP:'',
         fileSIUP:'',
-        txtExpiredSIUP:'#ts-textfield-siup',
-        btnBack:'#ts-button-back',
-        btnSaveAndCont:'#ts-button-savecontinue'
+        txtExpiredSIUP:'.ts-textfield-siup',
+        btnBack:'.ts-button-back',
+        btnSaveAndCont:'.ts-button-savecontinue'
     },
     commands:[{
         inputNPWPNumber:function(npwpNumber){

@@ -3,16 +3,16 @@ var base = require('./../../helper/base_page.js');
 
 var accountReg = {
     elements: {
-       txtFirstName:'#ts-textfield-firstname',
-       txtLastName:'#ts-textfield-lastname',
-       txtOfficeEmail:'#ts-textfield-officeemail',
-       txtPassword:'#ts-textfield-password',
-       btnCreateAccount:'#ts-button-createaccount',
-       eyeOpen:'',
-       linkTermOfService:'#ts-urllink-termofservice',
-       linkPrivacyPolicy:'#ts-urllink-privacypolicy',
-       emailChange:'#ts-text-changeemail',
-       btnSaveAndSendChangeEmail:'#ts-button-saveandsend'
+       txtFirstName:'.ts-textfield-firstname',
+       txtLastName:'.ts-textfield-lastname',
+       txtOfficeEmail:'.ts-textfield-officeemail',
+       txtPassword:'.ts-textfield-password',
+       btnCreateAccount:'.ts-button-createaccount',
+       eyeOpen:'.ts-label-eyeopen',
+       linkTermOfService:'.ts-urllink-termofservice',
+       linkPrivacyPolicy:'.ts-urllink-privacypolicy',
+       emailChange:'.ts-text-changeemail',
+       btnSaveAndSendChangeEmail:'.ts-button-saveandsend'
     },
     commands: [{
         inputFirstName: function(firstName){

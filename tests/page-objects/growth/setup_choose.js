@@ -2,9 +2,9 @@ var base = require('./../../helper/base_page.js');
 
 var setupChoose = {
     elements:{
-        rbSelfControl:'#ts-radiobutton-selfcontrol',
-        rbShareControl:'#ts-radiobuton-sharecontrol',
-        btnContinue:'#ts-button-continue'
+        rbSelfControl:'.ts-radiobutton-selfcontrol',
+        rbShareControl:'.ts-radiobuton-sharecontrol',
+        btnContinue:'.ts-button-continue'
     },
     commands:[{
         chooseSelfControl:function(){
