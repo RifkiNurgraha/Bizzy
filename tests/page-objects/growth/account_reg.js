@@ -1,5 +1,3 @@
-import { read } from 'fs';
-
 const env = require('dotenv').config();
 var base = require('./../../helper/base_page.js');
 
