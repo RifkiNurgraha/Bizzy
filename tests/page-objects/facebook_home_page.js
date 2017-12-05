@@ -55,7 +55,7 @@ var facebookHome = {
         base.setValueElementThenEnter(this, facebookHome.elements.pass, facebookHome.testData.passData, client);
       },
       assertUserPage: function() {
-        return client.assert.containsText(facebookHome.elements.profileName, facebookHome.testData.profileNameData);
+        return base.expectEqualsTextFromElement(this, facebookHome.elements.profileName, facebookHome.testData.profileNameData)
       }
     }]
   }
