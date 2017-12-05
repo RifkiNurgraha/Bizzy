@@ -2,16 +2,16 @@ var base = require('./../../helper/base_page.js');
 
 var businessProfileAddress = {
     elements:{
-        txtBuildingName:'#ts-textfield-buildingname',
-        txtStreetName:'#ts-textfield-streetname',
-        dropDownProvince:'#ts-dropdown-province',
-        dropDownCity:'#ts-dropdown-city',
-        dropDownDistric:'#ts-dropdown-distric',
-        dropdownKelurahan: '#ts-dropdown-kelurahan',
-        txtRegionCode: '#ts-textfield-regioncode',
-        txtOfficePhone:'#ts-textfield-officephone',
-        btnKembali:'#ts-button-kembali',
-        btnSaveAndContinue:'#ts-button-saveandcontinue',
+        txtBuildingName:'.ts-textfield-buildingname',
+        txtStreetName:'.ts-textfield-streetname',
+        dropDownProvince:'.ts-dropdown-province',
+        dropDownCity:'.ts-dropdown-city',
+        dropDownDistric:'.ts-dropdown-distric',
+        dropdownKelurahan: '.ts-dropdown-kelurahan',
+        txtRegionCode: '.ts-textfield-regioncode',
+        txtOfficePhone:'.ts-textfield-officephone',
+        btnKembali:'.ts-button-kembali',
+        btnSaveAndContinue:'.ts-button-saveandcontinue',
     },
     commands:[{
         inputBuildingName:function(buildingName){
@@ -36,7 +36,7 @@ var businessProfileAddress = {
             return base.getStringText(this,'@txtRegionCode')
         },
         inputOfficePhone:function(officePhone){
-            return base.setValueElement(this,'@txtPhone',officePhone)
+            return base.setValueElement(this,'@txtOfficePhone',officePhone)
         },
         clickBtnKembali:function(){
             return base.clickElement(this,'@btnKembali')
