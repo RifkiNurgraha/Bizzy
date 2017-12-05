@@ -9,10 +9,10 @@ var registrationPath = {
 };
 
 var postRegisterAccount = function(body,response){
-    describe('Account Registration - Existing email', function(){
+    describe('Account Registration', function(){
         it('cannot register using existing email', function(done){
             api.post(registrationPath.new)
-            .set('Accept','application/json')
+            .set('Content-Type','application/json')
             .send(body)
             .end(function(err, result){
                 response(result);
