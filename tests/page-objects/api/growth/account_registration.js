@@ -8,7 +8,7 @@ var registrationPath = {
     activate : "/registration/activate"
 };
 
-var postRegisterExistingEmail = function(body,response){
+var postRegisterAccount = function(body,response){
     describe('Account Registration - Existing email', function(){
         it('cannot register using existing email', function(done){
             api.post(registrationPath.new)
@@ -23,5 +23,5 @@ var postRegisterExistingEmail = function(body,response){
 }
 
 module.exports = {
-    postRegisterExistingEmail: postRegisterExistingEmail
+    postRegisterAccount: postRegisterAccount
 }
