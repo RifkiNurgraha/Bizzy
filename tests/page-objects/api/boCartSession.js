@@ -19,7 +19,7 @@ var postNewCart = function(body, describeIt, tokenSelection, response) {
     .send(body)
     .end(function(err, result) {
       response(result);
-      done(err);
+      //done(err);
     })
 };
 
@@ -30,7 +30,7 @@ var postAddItemCart = function(body, describeIt, tokenSelection, response) {
     .send(body)
     .end(function(err, result) {
       response(result);
-      done(err);
+      //done(err);
     })
 };
 
