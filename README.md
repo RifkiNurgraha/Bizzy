@@ -26,18 +26,20 @@ sudo apt-get install google-chrome-stable
 sudo apt-get install phantomjs
 ```
 
-**4.** Clone this repo
+**5.** Clone this repo
 
-**5.** Install all dependencies:
+**6.** Access the folder
+
+**7.** Install all dependencies:
 ```sh
-nmp install
+npm install
 ```
-Try this if you found any on_error:
+Try this if you found any  symlink error:
 ```sh
-nmp install --no-bin-links
+npm install --no-bin-links
 ```
 
-**6.** Run test:
+**8.** Run test:
 ```sh
 npm run test-docker-chrome
 or
@@ -54,7 +56,7 @@ or
 npm run test-api
 ```
 
-**7.** Run report:
+**9.** Run report:
 ```sh
 npm run report-chrome
 or
