@@ -25,3 +25,7 @@ When(/^user click submit login button$/, () => {
 Then(/^user can login successfully$/, () => {
     
 });
+
+Then(/^user cannot login$/, () => {
+    return login.verifyPage();
+});
