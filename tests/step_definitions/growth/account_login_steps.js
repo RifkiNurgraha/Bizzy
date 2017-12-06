@@ -2,11 +2,11 @@ const {client} = require('nightwatch-cucumber');
 const {Given, Then, When} = require('cucumber');
 const login = client.page.growth.account_login_page();
 
-Given(/^user is at login page$/, () => {
+Given(/^user is at account login page$/, () => {
     return login.navigateToPage();
 });
 
-Then(/^user can see login page$/, () => {
+Then(/^user can see account login page$/, () => {
     return login.verifyPage();
 });
 
