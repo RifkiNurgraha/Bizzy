@@ -15,10 +15,10 @@ var customCase = {
     it4 : 'cannot activate using blank key'
 }
 
-account.postRegisterationAccount(customCase.it1,registrationPath.new,testData.existingAccountData,function(response1){
-    expect(response1.status).to.equal(201)
-    expect(response1.body.success).to.equal(false)
-    expect(response1.body.message).to.equal("Email sudah terdaftar")
+account.postRegisterationAccount(customCase.it1,registrationPath.new,testData.existingAccountData,function(response){
+    expect(response.status).to.equal(201)
+    expect(response.body.success).to.equal(false)
+    expect(response.body.message).to.equal("Email sudah terdaftar")
 });
 
 account.postRegisterationAccount(customCase.it2,registrationPath.new,testData.newAccountData,function(response){
