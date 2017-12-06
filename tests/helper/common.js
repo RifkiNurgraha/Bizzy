@@ -13,6 +13,8 @@ var common = {
         expectString = 'Should get response 200 OK';
       } else if (response_code == '201') {
         expectString = 'Should get response 201 OK';
+      } else if (response_code == '204') {
+        expectString = 'Should get response 204 OK';
       } else if (response_code == '401') {
         expectString = 'Should get response 401 Unauthorize';
       } else if (response_code == '442') {
