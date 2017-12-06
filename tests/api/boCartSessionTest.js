@@ -26,61 +26,28 @@ var custString = {
   }
 };
 
-const supertest = require('supertest');
-var api = supertest(process.env.API_BASE_URL_BO);
-
-var cartSessionPath = {
-    newCart : "/cart/new",
-    addItemCart : "/cart/additem",
-    cartDetails : "/cart/detail"
-};
-
 describe('eCart Session Test', function () {
   
   var getEcartDetails = {
     "sessionId" : ""
   }
 
-  // before(function (done) {
-  //   // Create new cart
-  //   cartSession.postNewCart(bodyCartNew(), custString.describeIt.checkCreatenewSession, 'correct_token', function(response) {
-  //     expect(response.status).to.equal(200);
-  //     expect(response.body.message).to.contain("Success Create Cart");
-  //   });
-
-  //    // Add item to cart
-  //   cartSession.postAddItemCart(bodyAddItemCart(), custString.describeIt.checkAddItemCart, 'correct_token', function(response) {
-  //     expect(response.status).to.equal(200);
-  //     expect(response.body.message).to.contain("Success Add Item To Cart");
-  //     getEcartDetails.sessionId = response.body.data.session_id;
-  //   });
-  // });
-  
-  // // Get Details Cart by Session
-  // cartSession.getCartBySession (getEcartDetails.sessionId, custString.describeIt.getDetailsCartBySession, 'correct_token', function (response) {
-  //   expect(response.status).to.equal(200);
-  // });
-
-  before(function(done) {
-    api.post(cartSessionPath.newCart)
-    .set('Authorization', common.bearer('correct_token'))
-    .set('Accept', 'application/json')
-    .send(bodyCartNew())
-    .end(function(err, result) {
-      getEcartDetails.sessionId = result.body.data.session_id;  
-      done();
-    })
+  before(function (done) {
+    // Create new cart
+    cartSession.postNewCart(bodyCartNew(), 'correct_token', function(response) {
+      expect(response.status).to.equal(200);
+      expect(response.body.message).to.contain("Success Create Cart");
+      getEcartDetails.sessionId = response.body.data.session_id;
+      done ();
+    });
   });
 
-  it (custString.describeIt.checkAddItemCart, function (done) {
-    api.get (cartSessionPath.cartDetails+'/'+getEcartDetails.sessionId)
-    .set ('Authorization', common.bearer('correct_token'))
-    .set('Accept', 'application/json')
-    .end(function(err, result) {
-      console.log(result.body.data);
-      done(err);
-    })  
-  })
-
-});
+  it(custString.describeIt.getDetailsCartBySession, function (done) {
+    cartSession.getCartBySession (getEcartDetails.sessionId, 'correct_token', function (response) {
+      expect(response.status).to.equal(200);
+      done ();
+    });
+  });
+  
+ });
 

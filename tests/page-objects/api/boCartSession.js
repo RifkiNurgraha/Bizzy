@@ -12,38 +12,33 @@ var cartSessionPath = {
     cartDetails : "/cart/detail"
 };
 
-var postNewCart = function(body, describeIt, tokenSelection, response) {
+var postNewCart = function(body, tokenSelection, response) {
   api.post(cartSessionPath.newCart)
     .set('Authorization', common.bearer(tokenSelection))
     .set('Accept', 'application/json')
     .send(body)
     .end(function(err, result) {
       response(result);
-      //done(err);
     })
 };
 
-var postAddItemCart = function(body, describeIt, tokenSelection, response) {
+var postAddItemCart = function(body, tokenSelection, response) {
   api.post(cartSessionPath.addItemCart)
     .set('Authorization', common.bearer(tokenSelection))
     .set('Accept', 'application/json')
     .send(body)
     .end(function(err, result) {
       response(result);
-      //done(err);
     })
 };
 
-var getCartBySession = function (sessionId, describeIt, tokenSelection, response) {
-  it (describeIt, function (done) {
-    api.get (cartSessionPath.cartDetails+'/'+sessionId)
+var getCartBySession = function (sessionId, tokenSelection, response) {
+  api.get (cartSessionPath.cartDetails+'/'+sessionId)
     .set ('Authorization', common.bearer(tokenSelection))
     .set('Accept', 'application/json')
     .end(function(err, result) {
       response(result);
-      done(err);
     })  
-  })
 };
 
 module.exports = {
