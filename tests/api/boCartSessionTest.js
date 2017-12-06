@@ -17,11 +17,17 @@ var bodyAddItemCart = function() {
   return body;
 };
 
+var bodyGetCartbySession = {
+  "userID": "",
+  "user_name": ""
+}
+
 var custString = {
   description: 'eCart - Cart Session',
   describeIt: {
     checkCreatenewSession: 'should create new session',
-    checkAddItemCart: 'should add product to cart'
+    checkAddItemCart: 'should add product to cart',
+    getDetailsCartBySession: 'should get detail eCart by Session'
   }
 };
 
@@ -35,4 +41,12 @@ cartSession.postNewCart(bodyCartNew(), custString.description, custString.descri
 cartSession.postAddItemCart(bodyAddItemCart(), custString.description, custString.describeIt.checkAddItemCart, 'correct_token', function(response) {
   expect(response.status).to.equal(200);
   expect(response.body.message).to.contain("Success Add Item To Cart");
+});
+
+// Get Details Cart by Session
+cartSession.getCartBySession (session, custString.description, custString.describeIt.getDetailsCartBySession, 'correct_token', function (response) {
+  expect(response.status).to.equal(200);
+  bodyGetCartbySession.user_name = response.body.data.user_name;
+  bodyGetCartbySession.user_id = response.body.data.user_id;
+  console.log (bodyGetCartbySession.user_name);
 });

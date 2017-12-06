@@ -8,7 +8,8 @@ var common = require ('./../../helper/common.js');
 
 var cartSessionPath = {
     newCart : "/cart/new",
-    addItemCart : "/cart/additem"
+    addItemCart : "/cart/additem",
+    cartDetails : "/cart/detail"
 };
 
 var postNewCart = function(body, description, describeIt, tokenSelection, response) {
@@ -45,7 +46,24 @@ var postAddItemCart = function(body, description, describeIt, tokenSelection, re
     })
 };
 
+var getCartBySession = function (sessionId, description, describeIt, tokenSelection, response) {
+  describe ('eCart - Get Cart Details', function () {
+    describe ('#' + description, function () {
+      it (describeIt, function (done) {
+        api.get (cartSessionPath.cartDetails+'/'+sessionId)
+          .set ('Authorization', common.bearer(tokenSelection))
+          .set('Accept', 'application/json')
+          .end(function(err, result) {
+            response(result);
+            done(err);
+          })  
+      })
+    })
+  })
+};
+
 module.exports = {
   postNewCart: postNewCart,
-  postAddItemCart: postAddItemCart
+  postAddItemCart: postAddItemCart,
+  getCartBySession: getCartBySession
 }

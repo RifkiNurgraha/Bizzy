@@ -49,16 +49,16 @@ var addItemBody = ({
     "configurable_id": 746,
     "simple_id": 747,
     "sku": "1IokDeEewczrr6p7vbEC",
-    "description": "bla bla",
+    "description": "Black 128Gb",
     "vendor": {
       "id": "106152",
       "name": "PT DJ MC1 Sub1"
     },
-    "uom": "Unit",
-    "qty": 3,
-    "weight": 3,
-    "purchase_price": 6044,
-    "sales_price": 5495
+    "uom": "unit",
+    "qty": 2,
+    "weight": 2,
+    "purchase_price": 12543737,
+    "sales_price": 10000000
   }
 });
 
