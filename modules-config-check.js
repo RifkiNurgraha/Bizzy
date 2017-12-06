@@ -1,7 +1,7 @@
 const seleniumServerPath = './node_modules/selenium-server/lib/runner/selenium-server-standalone-3.4.0.jar';
 const chromedriverPath = './node_modules/chromedriver/lib/chromedriver/chromedriver';
 const geckodriverPath = './node_modules/geckodriver/geckodriver';
-const ghostdriverPath = './node_modules/phantomjs/bin/phantomjs';
+const ghostdriverPath = './node_modules/phantomjs-prebuilt/bin/phantomjs';
 const cmd = require('node-cmd');
 
 var checkChromeDriver = function() {
