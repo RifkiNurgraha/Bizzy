@@ -2,13 +2,10 @@ const should = require('chai').should();
 const expect = require('chai').expect;
 const supertest = require('supertest');
 const env = require('dotenv').config();
-var request = require("request");
-var EventEmitter = require("events").EventEmitter;
 var api = supertest(process.env.API_PHOEN_BASE_URL);
 var common = require ('./../../../../helper/common.js');
 
 var brandsPath = "/backoffice/brands";
-var bodyr = new EventEmitter();
 
 //create brands
 var postCreateBrands = function(body, description, describeIt, tokenSelection, response) {
@@ -28,6 +25,46 @@ var postCreateBrands = function(body, description, describeIt, tokenSelection, r
     })
   };
 
+//create brand 2
+var createBrand2 = function(body, tokenSelection,response) {
+  api.post(brandsPath)
+    .set('Authorization', common.bearer(tokenSelection))
+    .set('Accept', 'application/json')
+    .send(body)
+    .end(function(err, result) {
+      response(result);
+  })
+}
+//get brand 2
+var getBrands2 = function(brandID, tokenSelection, response){
+  api.get(brandsPath + '/' + brandID)
+    .set('Authorization', common.bearer(tokenSelection))
+    .set('Accept', 'application/json')
+    .end(function(err, result) {
+      response(result);
+  })
+}
+
+//update brand 2
+var updateBrand2 = function(brandID, body, tokenSelection, response){
+  api.put(brandsPath + '/' + brandID)
+  .set('Authorization', common.bearer(tokenSelection))
+  .set('Accept', 'application/json')
+  .send(body)
+  .end(function(err, result) {
+    response(result);
+})
+}
+//delete brand 2
+var deleteBrand2 = function(brandID,tokenSelection, response){
+  api.delete(brandsPath + '/' + brandID)
+  .set('Authorization', common.bearer(tokenSelection))
+  .set('Accept', 'application/json')
+  .end(function(err, result) {
+    response(result);
+})
+}
+ 
 //get brands
 var getBrands = function(brandID, description, describeIt, tokenSelection, response) {
     describe('GET /backoffice/brands', function() {
@@ -116,6 +153,9 @@ var postDeleteBrands = function(body, deleteBrand, description, describeIt, toke
     getBrandsWithoutAuth:getBrandsWithoutAuth,
     getBrandsWithoutType:getBrandsWithoutType,
     getBrandsList:getBrandsList,
-    postDeleteBrands:postDeleteBrands
-    // postCustomer: postCustomer
+    postDeleteBrands:postDeleteBrands,
+    createBrand2:createBrand2,
+    getBrands2:getBrands2,
+    updateBrand2:updateBrand2,
+    deleteBrand2:deleteBrand2
   };
