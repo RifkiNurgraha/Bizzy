@@ -27,6 +27,7 @@ var custString = {
 
 // Create new cart
 cartSession.postNewCart(bodyCartNew(), custString.description, custString.describeIt.checkCreatenewSession, 'correct_token', function(response) {
+  console.log(response.body);
   expect(response.status).to.equal(200);
   expect(response.body.message).to.contain("Success Create Cart");
 });
@@ -35,4 +36,10 @@ cartSession.postNewCart(bodyCartNew(), custString.description, custString.descri
 cartSession.postAddItemCart(bodyAddItemCart(), custString.description, custString.describeIt.checkAddItemCart, 'correct_token', function(response) {
   expect(response.status).to.equal(200);
   expect(response.body.message).to.contain("Success Add Item To Cart");
+});
+
+// Post Get Cart
+cartSession.postgetNewCart(bodyCartNew(), custString.description, custString.describeIt.checkCreatenewSession, 'correct_token', function(response) {
+  console.log(response.body);
+  expect(response.status).to.equal(200);
 });
