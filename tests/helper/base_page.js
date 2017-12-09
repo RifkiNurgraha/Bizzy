@@ -80,6 +80,11 @@ var expectVisible = function(page,elementSelector){
   return page.expect.element(elementSelector).to.be.visible;
 }
 
+// expect to be present
+var expectPresent = function(page,elementSelector){
+  return page.expect.element(elementSelector).to.be.present;
+}
+
 // choose an option from dropdown list
 var chooseOptionValue = function(page,elementSelector,selectedOption){
   return page.click(elementSelector,()=>{
