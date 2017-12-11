@@ -5,7 +5,6 @@ const env = require('dotenv').config();
 require('nightwatch-cucumber')({
   nightwatchOutput: true,
   cucumberArgs: [
-    // '--require', 'tests/helper/hooks.js',
     '--require', 'tests/step_definitions',                          //include step_definitions folder
     '--format', 'json:reports/phantomjs/cucumber_phantomjs.json',   //include cucumber.json folder
     '--format', 'node_modules/cucumber-pretty',                     //print nice looking cucumber in console

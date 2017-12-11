@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "postinstall": "node modules-config-check.js",
     "test": "npm run test-docker-chrome",
     "test-chrome": "node_modules/nightwatch/bin/nightwatch --config nightwatch_chrome.conf.js --env chrome",
     "test-firefox": "node_modules/nightwatch/bin/nightwatch --config nightwatch_firefox.conf.js --env firefox",
@@ -19,29 +18,7 @@
   "description": "nightwatchjs mocha poc automation",
   "main": "nightwatch.conf.js",
   "devDependencies": {
-    "body-parser": "^1.18.2",
-    "chai": "^4.1.2",
-    "chromedriver": "^2.33.2",
-    "cucumber": "^3.1.0",
-    "cucumber-html-reporter": "^3.0.4",
-    "cucumber-pretty": "0.0.5",
-    "dotenv": "^4.0.0",
-    "express": "^4.16.2",
-    "geckodriver": "^1.10.0",
-    "latest": "^0.2.0",
-    "mocha": "^3.5.3",
-    "mocha-parallel-tests": "^1.2.10",
-    "mochawesome": "^2.3.1",
-    "nightwatch": "^0.9.16",
-    "nightwatch-base-page": "^1.0.0",
-    "nightwatch-cucumber": "^8.2.8",
-    "nightwatch-html-reporter": "^2.0.4",
-    "node-cmd": "^3.0.0",
-    "phantomjs-prebuilt": "^2.1.16",
-    "selenium-server": "^3.4.0",
-    "should": "^13.1.3",
-    "supertest": "^3.0.0",
-    "z": "^1.0.3"
+    "nightwatch-base-page": "^1.2.0"
   },
   "repository": {
     "type": "git",
