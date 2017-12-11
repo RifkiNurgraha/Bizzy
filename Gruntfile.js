@@ -15,10 +15,6 @@ module.exports = function(grunt) {
                 src: ['./node_modules/nightwatch-base-page/lib/browser-config/nightwatch_firefox.conf.js'],
                 dest: 'nightwatch_firefox.conf.js'
             },
-            phantomjs: {
-                src: ['./node_modules/nightwatch-base-page/lib/browser-config/nightwatch_phantomjs.conf.js'],
-                dest: 'nightwatch_phantomjs.conf.js'
-            },
             dockerchrome: {
                 src: ['./node_modules/nightwatch-base-page/lib/browser-config/docker-chrome-conf.js'],
                 dest: 'docker-chrome-conf.js'
