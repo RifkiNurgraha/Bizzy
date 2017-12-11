@@ -1,6 +1,6 @@
 const env = require('dotenv').config();
 const {client} = require('nightwatch-cucumber');
-var base = require('./../helper/base_page.js');
+const base = require('nightwatch-base-page');
 
 var instagramHome = {
     url: function set_url() {

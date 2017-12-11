@@ -16,3 +16,11 @@ reports/phantomjs/*.json
 *.png
 *.log
 *.html
+modules-config-check.js
+docker-chrome-conf.js
+docker-firefox-conf.js
+docker-phantomjs-conf.js
+nightwatch_chrome.conf.js
+nightwatch_firefox.conf.js
+nightwatch_phantomjs.conf.js
+browserconfig.json
