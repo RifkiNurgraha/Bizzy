@@ -10,55 +10,62 @@ This is POC repo for NightwatchJS and Mocha API/web automation using BDD and pag
 
 **2.** Install firefox for ubuntu:
 ```sh
-sudo apt-get install firefox
+$ sudo apt-get install firefox
 ```
 
 **3.** Install chrome for ubuntu:
 ```sh
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-sudo apt-get update
-sudo apt-get install google-chrome-stable
+$ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+$ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+$ sudo apt-get update
+$ sudo apt-get install google-chrome-stable
 ```
 
 **4.** Install phantomjs for ubuntu:
 ```sh
-sudo apt-get install phantomjs
+$ sudo apt-get install phantomjs
 ```
 
-**4.** Clone this repo
+**5.** Clone this repo
 
-**5.** Install all dependencies:
-```sh
-nmp install
-```
-Try this if you found any on_error:
-```sh
-nmp install --no-bin-links
-```
+**6.** Access the folder
 
-**6.** Run test:
+**7.** Install all dependencies:
 ```sh
-npm run test-docker-chrome
-or
-npm run test-docker-firefox
-or
-npm run test-docker-phantomjs
-or
-npm run test-chrome
-or
-npm run test-firefox
-or
-npm run test-phantomjs
-or
-npm run test-api
+$ npm install
+```
+Try this if you found any  symlink error:
+```sh
+$ npm install --no-bin-links
 ```
 
-**7.** Run report:
+**7.** Run task-runner:
 ```sh
-npm run report-chrome
+$ grunt
+```
+
+**9.** Run test:
+```sh
+$ npm run test-docker-chrome
 or
-npm run report-chrome
+$ npm run test-docker-firefox
 or
-npm run report-phantomjs
+$ npm run test-docker-phantomjs
+or
+$ npm run test-chrome
+or
+$ npm run test-firefox
+or
+$ npm run test-phantomjs
+or
+$ npm run test-api
+```
+
+**9.** Run report:
+```sh
+$ npm run report-chrome
+or
+$ npm run report-chrome
+or
+$ npm run report-phantomjs
 ```

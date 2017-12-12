@@ -49,21 +49,31 @@ var addItemBody = ({
     "configurable_id": 746,
     "simple_id": 747,
     "sku": "1IokDeEewczrr6p7vbEC",
-    "description": "bla bla",
+    "description": "Black 128Gb",
     "vendor": {
       "id": "106152",
       "name": "PT DJ MC1 Sub1"
     },
-    "uom": "Unit",
-    "qty": 3,
-    "weight": 3,
-    "purchase_price": 6044,
-    "sales_price": 5495
+    "uom": "unit",
+    "qty": 2,
+    "weight": 2,
+    "purchase_price": 12543737,
+    "sales_price": 10000000
   }
+});
+
+var addActivityLog = ({
+  "source": "",
+  "name": "mochachaitest name",
+  "description": "mochachaitest description",
+  "action": "",
+  "module_name": "mochachaitest module name",
+  "data": "{\"original\":\"{\"name\":\"old_name\"},{\"new_value\":\"{\"name\":\"new name\"}\"}"
 });
 
 module.exports = {
   customerBody: customerBody,
   cartNewBody: cartNewBody,
-  addItemBody: addItemBody
-}
+  addItemBody: addItemBody,
+  addActivityLog: addActivityLog
+};  

@@ -1,7 +1,7 @@
 const env = require('dotenv').config();
 const {client} = require('nightwatch-cucumber');
 const { matches } = require('z')
-var base = require('./../helper/base_page.js');
+const base = require('nightwatch-base-page');
 
 var home = {
   url: function set_url() {

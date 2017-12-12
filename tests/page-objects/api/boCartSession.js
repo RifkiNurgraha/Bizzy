@@ -8,7 +8,8 @@ var common = require ('./../../helper/common.js');
 
 var cartSessionPath = {
     newCart : "/cart/new",
-    addItemCart : "/cart/additem"
+    addItemCart : "/cart/additem",
+    cartDetails : "/cart/detail"
 };
 
 var postNewCart = function(body, description, describeIt, tokenSelection, response) {
@@ -19,6 +20,36 @@ var postNewCart = function(body, description, describeIt, tokenSelection, respon
           .set('Authorization', common.bearer(tokenSelection))
           .set('Accept', 'application/json')
           .send(body)
+          .end(function(err, result) {
+            response(result);
+            done(err);
+        })
+      })
+    })
+  })
+};
+
+var postgetNewCart = function(sessionId, description, describeIt, tokenSelection, response) {
+  describe('eCart - Post /cart/new', function() {
+    describe('#' + description, function() {
+      var sessionId = 0;
+
+      it(describeIt, function(done) {
+        api.post(cartSessionPath.newCart)
+          .set('Authorization', common.bearer(tokenSelection))
+          .set('Accept', 'application/json')
+          .send(body)
+          .end(function(err, result) {
+            response(result);
+            sessionId = result.body.data.session_id;
+            done(err);
+        })
+      });
+
+      it(describeIt, function(done) {
+        api.get(cartSessionPath.cartDetails + '/' + sessionId)
+          .set('Authorization', common.bearer(tokenSelection))
+          .set('Accept', 'application/json')
           .end(function(err, result) {
             response(result);
             done(err);
@@ -47,5 +78,6 @@ var postAddItemCart = function(body, description, describeIt, tokenSelection, re
 
 module.exports = {
   postNewCart: postNewCart,
+  postgetNewCart: postgetNewCart,
   postAddItemCart: postAddItemCart
 }
