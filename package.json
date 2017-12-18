@@ -4,7 +4,7 @@
     "test-chrome": "node_modules/nightwatch/bin/nightwatch --config nightwatch_chrome.conf.js --env chrome",
     "test-firefox": "node_modules/nightwatch/bin/nightwatch --config nightwatch_firefox.conf.js --env firefox",
     "test-phantomjs": "node_modules/nightwatch/bin/nightwatch --config nightwatch_phantomjs.conf.js --env phantomjs",
-    "test-docker-chrome": "node_modules/nightwatch/bin/nightwatch --config docker-chrome-conf.js",
+    "test-docker-chrome": "node_modules/nightwatch/bin/nightwatch --config docker-chrome-conf.js --tag catalog",
     "test-docker-firefox": "node_modules/nightwatch/bin/nightwatch --config docker-firefox-conf.js",
     "test-docker-phantomjs": "node_modules/nightwatch/bin/nightwatch --config docker-phantomjs-conf.js",
     "report-chrome": "node reports/chrome/create-html-report-chrome.js",
