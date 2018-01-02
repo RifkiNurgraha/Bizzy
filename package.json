@@ -18,7 +18,7 @@
   "description": "nightwatchjs mocha poc automation",
   "main": "nightwatch.conf.js",
   "devDependencies": {
-    "nightwatch-base-page": "^1.2.1"
+    "bizzy-nightwatch-base-page": "^0.2.2"
   },
   "repository": {
     "type": "git",

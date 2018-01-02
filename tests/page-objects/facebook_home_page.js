@@ -1,6 +1,6 @@
 const env = require('dotenv').config();
 const {client} = require('nightwatch-cucumber');
-const base = require('nightwatch-base-page');
+const base = require('bizzy-nightwatch-base-page');
 
 var facebookHome = {
     url: function() {
