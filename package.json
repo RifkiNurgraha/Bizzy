@@ -3,7 +3,6 @@
     "test": "npm run test-docker-chrome",
     "test-chrome": "node_modules/nightwatch/bin/nightwatch --config nightwatch_chrome.conf.js --env chrome",
     "test-firefox": "node_modules/nightwatch/bin/nightwatch --config nightwatch_firefox.conf.js --env firefox",
-    "test-phantomjs": "node_modules/nightwatch/bin/nightwatch --config nightwatch_phantomjs.conf.js --env phantomjs",
     "test-docker-chrome": "node_modules/nightwatch/bin/nightwatch --config docker-chrome-conf.js",
     "test-docker-firefox": "node_modules/nightwatch/bin/nightwatch --config docker-firefox-conf.js",
     "test-docker-phantomjs": "node_modules/nightwatch/bin/nightwatch --config docker-phantomjs-conf.js",
@@ -18,7 +17,7 @@
   "description": "nightwatchjs mocha poc automation",
   "main": "nightwatch.conf.js",
   "devDependencies": {
-    "nightwatch-base-page": "^1.2.1"
+    "bizzy-nightwatch-base-page": "^0.4.1"
   },
   "repository": {
     "type": "git",
