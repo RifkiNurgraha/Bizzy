@@ -1,5 +1,5 @@
 const env = require('dotenv').config();
-const base = require('nightwatch-base-page');
+const base = require('bizzy-nightwatch-base-page');
 
 var benefit = {
   elements: {
