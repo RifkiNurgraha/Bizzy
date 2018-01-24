@@ -10,8 +10,8 @@ When(/^user see title "([^"]*)"$/, (text) => {
     return browser.assertPageSectionTitle(text);
 });
 
-Then(/^user enter message$/, () => {
-    return browser.setMessageSection1();
+Then(/^user enter "([^"]*)"$/, (text) => {
+    return browser.setMessageSection1(text);
 });
 
 When(/^click "([^"]*)" button$/, (button) => {
@@ -19,10 +19,15 @@ When(/^click "([^"]*)" button$/, (button) => {
 });
 
 Then(/^user will see text result "([^"]*)"$/, (text) => {
-    return browser.assertresultData(text);
+    return browser.assertresultData1(text);
 });
 
-Then(/^user enter A and B$/, () => {
-    return browser.setMessageSection2();
+Then(/^user enter "([^"]*)" and "([^"]*)"$/, (numberA, numberB) => {
+    return browser.setMessageSection2(numberA, numberB);
 });
+
+Then(/^user will see text result "([^"]*)" and "([^"]*)"$/, (numberA, numberB) => {
+    return browser.assertresultData2(numberA, numberB);
+});
+
   

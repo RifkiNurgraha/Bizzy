@@ -10,10 +10,7 @@ var basicDemoPage = {
     },
     testData: {
       sectiontitle1: 'Single Input Field',
-      txtmsg: 'Tata',
-      sectiontitle2: 'Two Input Fields',
-      txtA: '1',
-      txtB: '2',
+      sectiontitle2: 'Two Input Fields'
     },
     elements: {
       sectiontitlemsg1: '.col-md-6.text-left>div:nth-child(4)>.panel-heading',
@@ -32,17 +29,17 @@ var basicDemoPage = {
       },
       assertPageSectionTitle: function(text) {
         if(text == 'section1'){
-            return this.api.expect.element(basicDemoPage.elements.sectiontitlemsg1).text.to.equal(basicDemoPage.testData.sectiontitle1);
+          return this.api.expect.element(basicDemoPage.elements.sectiontitlemsg1).text.to.equal(basicDemoPage.testData.sectiontitle1)
         }else{
-            return this.api.expect.element(basicDemoPage.elements.sectiontitlemsg2).text.to.equal(basicDemoPage.testData.sectiontitle2);
+          return this.api.expect.element(basicDemoPage.elements.sectiontitlemsg2).text.to.equal(basicDemoPage.testData.sectiontitle2)
         }
       },
-      setMessageSection1: function() {
-        base.setValueElement(this, basicDemoPage.elements.entermsg, basicDemoPage.testData.txtmsg);
+      setMessageSection1: function(text) {
+        base.setValueElement(this, basicDemoPage.elements.entermsg, text);
       },
-      setMessageSection2: function() {
-        base.setValueElement(this, basicDemoPage.elements.enterA, basicDemoPage.testData.txtA);
-        base.setValueElement(this, basicDemoPage.elements.enterB, basicDemoPage.testData.txtB);
+      setMessageSection2: function(numberA, numberB) {
+        base.setValueElement(this, basicDemoPage.elements.enterA, numberA);
+        base.setValueElement(this, basicDemoPage.elements.enterB, numberB);
       },
       clickButton: function(button) {
         if (button == 'Show Message') {
@@ -51,15 +48,13 @@ var basicDemoPage = {
         else if (button == 'Get Total') {
             base.clickElement(this, basicDemoPage.elements.btngetgoal);
         }
-        base.pauseSleep(this.api, 5000);
       },
-      assertresultData: function(text) {
-        if(text == 'section1'){
-            return base.expectEqualsTextFromElement(this, basicDemoPage.elements.resultmsg, basicDemoPage.testData.txtmsg)
-        }else{
-            var AA = parseInt(basicDemoPage.testData.txtA) + parseInt(basicDemoPage.testData.txtB);
-            return base.expectEqualsTextFromElement(this, basicDemoPage.elements.resultgoal, AA)
-        }
+      assertresultData1: function(text) {
+        return base.expectEqualsTextFromElement(this, basicDemoPage.elements.resultmsg, text)
+      },
+      assertresultData2: function(numberA, numberB) {
+        var AA = parseInt(numberA) + parseInt(numberB);
+        return base.expectEqualsTextFromElement(this, basicDemoPage.elements.resultgoal, AA)
       },
     }]
   }
