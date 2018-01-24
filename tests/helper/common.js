@@ -32,6 +32,13 @@ var common = {
       min = 100000000000000;
       max = 999999999999999;
       return (Math.floor(Math.random() * (max - min)) + min).toString();
+    },
+    catalogtest: function(tokenselection){
+      if(tokenselection == 'correct_token'){
+        return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhdGtodXJvemFxLmJ1ZGlAYml6enkuY28uaWQiLCJmaXJzdF9uYW1lIjoiRmF0aGtodXJvemFxIEJ1ZGkgU2V0aWF3YW4iLCJsYXN0X25hbWUiOm51bGwsInNjb3BlIjoiZW1wbG95ZWUiLCJlbXBsb3llZSI6eyJpZCI6NzMsIm5hbWUiOiJGYXRoa3Vyb3phcSBCUyIsImVtYWlsIjoiZmF0a2h1cm96YXEuYnVkaUBiaXp6eS5jby5pZCIsInRlYW1faWQiOjExLCJ0ZWFtIjoiVGVjaG5vbG9neSIsInJvbGVzIjpbeyJpZCI6NSwibmFtZSI6IlNvZnR3YXJlIERldmVsb3BtZW50IEVuZ2luZWVyIGluIFRlc3QifV19LCJpYXQiOjE1MTY3ODI5ODYsImV4cCI6MTUxNjc5MDE4Nn0.nmW4SktNxyvn1t_jLSxm1zrPIWLHS7K4KJ1IEW9C7z8";
+      }else{
+        return "";
+      }
     }
 };
 

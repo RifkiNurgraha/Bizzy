@@ -53,7 +53,7 @@ describe('POST GET /customer using before', function() {
 });
 
 // test using it
-describe('POST GET /customer using it', function() {
+describe('@test ' + 'POST GET /customer using it', function() {
   describe(custString.description, function () {
     
     var getEcartDetails = {
