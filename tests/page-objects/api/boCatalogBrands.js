@@ -10,18 +10,26 @@ var catalogSessionPath = {
     catalogBrands: "/catalog/brands",
 };
 
-var getCatalog = function (sessionId, tokenSelection, response) {
-    console.log("HALOOO");
-    console.log(process.env.API_BASE_URL_BO_TEST+catalogSessionPath.catalogBrands+'/'+sessionId);
-    api.get (catalogSessionPath.catalogBrands+'/'+sessionId)
+var getCatalog = function (tokenSelection, response) {
+    api.get (catalogSessionPath.catalogBrands)
     .set('Authorization', common.catalogtest(tokenSelection))
     .set('Content-Type', 'application/json')
-    .end(function(result) {
+    .end(function(err, result) {
       response(result);
     })  
 };
 
+var getCatalogParam = function (catalogSearch_search, catalogSearch_page, catalogSearch_limit, tokenSelection, response) {
+    api.get (catalogSessionPath.catalogBrands)
+    .query({search: catalogSearch_search, page: catalogSearch_page, limit: catalogSearch_limit})
+    .set('Authorization', common.catalogtest(tokenSelection))
+    .set('Content-Type', 'application/json')
+    .end(function(err, result) {
+      response(result);
+    })  
+};
 
 module.exports = {
-    getCatalog:getCatalog
+    getCatalog:getCatalog,
+    getCatalogParam:getCatalogParam
 }
