@@ -1,3 +1,4 @@
+var tokenLogin;
 var common = {
     bearer: function(tokenselection) {
       if (tokenselection == 'correct_token') {
@@ -33,10 +34,13 @@ var common = {
       max = 999999999999999;
       return (Math.floor(Math.random() * (max - min)) + min).toString();
     },
-    catalogtest: function(tokenselection){
-      if(tokenselection == 'correct_token'){
-        return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhdGtodXJvemFxLmJ1ZGlAYml6enkuY28uaWQiLCJmaXJzdF9uYW1lIjoiRmF0aGtodXJvemFxIEJ1ZGkgU2V0aWF3YW4iLCJsYXN0X25hbWUiOm51bGwsInNjb3BlIjoiZW1wbG95ZWUiLCJlbXBsb3llZSI6eyJpZCI6NzMsIm5hbWUiOiJGYXRoa3Vyb3phcSBCUyIsImVtYWlsIjoiZmF0a2h1cm96YXEuYnVkaUBiaXp6eS5jby5pZCIsInRlYW1faWQiOjExLCJ0ZWFtIjoiVGVjaG5vbG9neSIsInJvbGVzIjpbeyJpZCI6NSwibmFtZSI6IlNvZnR3YXJlIERldmVsb3BtZW50IEVuZ2luZWVyIGluIFRlc3QifV19LCJpYXQiOjE1MTY3OTA3NzYsImV4cCI6MTUxNjc5Nzk3Nn0.4NLjAqI6NeCXqvlXr7ZWcUPCndeiE_cSRr55DDKD-e0";
-      }else{
+    setToken: function(token){
+      tokenLogin = token;
+    },
+    tokenLogin: function(tokenselection) {
+      if (tokenselection == 'correct_token') {
+        return tokenLogin;
+      } else {
         return "";
       }
     }

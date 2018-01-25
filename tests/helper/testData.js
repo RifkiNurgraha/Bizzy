@@ -71,9 +71,15 @@ var addActivityLog = ({
   "data": "{\"original\":\"{\"name\":\"old_name\"},{\"new_value\":\"{\"name\":\"new name\"}\"}"
 });
 
+var loginData = ({
+  "username" : "fatkhurozaq.budi@bizzy.co.id",
+  "password" : "bizzy123",
+});
+
 module.exports = {
   customerBody: customerBody,
   cartNewBody: cartNewBody,
   addItemBody: addItemBody,
-  addActivityLog: addActivityLog
+  addActivityLog: addActivityLog,
+  loginData:loginData
 };  
