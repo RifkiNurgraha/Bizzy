@@ -17,14 +17,14 @@
   "version": "1.0.0",
   "description": "nightwatchjs mocha poc automation",
   "main": "nightwatch.conf.js",
-  "devDependencies": {
-    "bizzy-nightwatch-base-page": "^0.2.4"
-  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@bitbucket.org/bizzyindonesia//nightwatch-mocha-poc-automation.git"
   },
   "author": "SDET Bizzy",
   "license": "",
-  "homepage": "https://bitbucket.org/bizzyindonesia/nightwatch-mocha-poc-automation#readme"
+  "homepage": "https://bitbucket.org/bizzyindonesia/nightwatch-mocha-poc-automation#readme",
+  "dependencies": {
+    "bizzy-nightwatch-base-page": "^0.5.1"
+  }
 }
