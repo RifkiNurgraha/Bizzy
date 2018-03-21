@@ -21,3 +21,6 @@ Scenario Outline: count total value
     |a||2|
     |2||v|
     |b||c|
+    |||1|
+    |2|||
+    ||||
