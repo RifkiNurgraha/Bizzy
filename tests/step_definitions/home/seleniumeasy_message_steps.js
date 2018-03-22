@@ -1,7 +1,6 @@
 const {client} = require('nightwatch-cucumber');
 const {defineSupportCode} = require('cucumber');
 var seleniumeasy_message=client.page.seleniumeasy.seleniumeasy_message();
-var sel =client.page
 
 defineSupportCode(({Given, Then, When}) => {
     Given(/^user is at seleniumeasy first demo$/, () => {

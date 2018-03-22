@@ -25,7 +25,7 @@ var bohome = {
         inputPassword:'#pass',
         buttonLogin: '.uk-margin .uk-button.uk-button-primary.uk-width-1-1.ts-button-login',
         verifyUserName: '.uk-container .uk-navbar .uk-navbar-right.uk-margin-remove-right .users-link.ts-label-username',
-        vrifyCompanyName: '.uk-text-center.uk-text-zeta.uk-text-600.uk-margin.company-title',
+        verifyCompanyName: '.uk-text-center.uk-text-zeta.uk-text-600.uk-margin.company-title',
         menuDaftarProduct: '.list-menu li:nth-child(2) .link-sidebar.ts-urllink-listproduct',
         verifyMenuDaftarProduk: '.uk-margin-remove.uk-text-beta.uk-margin-32-bottom',
         menuTambahProduct:'.list-menu .link-sidebar.ts-urllink-addproduct',
@@ -62,7 +62,7 @@ var bohome = {
       },
       assertDashboardPage: function(){
         return base.assertPageTitle(this, bohome.testData.pageTitleHome);
-        // return base.expectEqualsTextFromElement(this, bohome.elements.verifyUserName, bohome.testData.userName);
+
       },
       goToMenu: function(tabMenu){
         if (tabMenu == 'daftar produk'){
@@ -82,8 +82,7 @@ var bohome = {
         return base.assertContainsText(this, bohome.elements.listProdukPertama, namaProduk);
       },
       verifyJumlahStok: function(jumlahStok){
-        base.getStringText(this, bohome.elements.stokProduk, jumlahStok.toString());
-        // return base.expectEqualsValueFromElement(this, bohome.elements.stokProduk, jumlahStok);
+        return base.getStringText(this, bohome.elements.stokProduk, jumlahStok.toString());
       }
     }]
   }
