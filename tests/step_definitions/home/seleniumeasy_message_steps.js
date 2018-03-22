@@ -1,6 +1,7 @@
 const {client} = require('nightwatch-cucumber');
 const {defineSupportCode} = require('cucumber');
 var seleniumeasy_message=client.page.seleniumeasy.seleniumeasy_message();
+var sel =client.page
 
 defineSupportCode(({Given, Then, When}) => {
     Given(/^user is at seleniumeasy first demo$/, () => {
@@ -22,15 +23,9 @@ defineSupportCode(({Given, Then, When}) => {
     When (/^user input "([^"]*)" for second value$/,(valueB) => {
         return seleniumeasy_message.inputValueKedua(valueB);
     });
-    Then (/^user click button total$/,() =>{
+    Then (/^user click button total$/,() => {
         return seleniumeasy_message.clickTotalValue();
     });
-    Then (/^you get value A$/,()=>{
-        return seleniumeasy_message.getValueA();
-    })
-    Then (/^you get value B$/,()=>{
-        return seleniumeasy_message.getValueB();
-    })
     Then (/^insert "([^"]*)" "([^"]*)" you can see total value$/,(valueA, valueB) =>{
         return seleniumeasy_message.verifyTotalValue(valueA, valueB);
     });
