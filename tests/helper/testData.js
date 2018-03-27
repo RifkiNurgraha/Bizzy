@@ -70,10 +70,85 @@ var addActivityLog = ({
   "module_name": "mochachaitest module name",
   "data": "{\"original\":\"{\"name\":\"old_name\"},{\"new_value\":\"{\"name\":\"new name\"}\"}"
 });
+var queryEmployeeList = (
+  {
+      "employee_name": "Admin",
+      "employee_email": "admin@bizzy.co.id",
+      "role_name": "Software Development Engineer in Test",
+      "team_name": "Technology",
+      "sort_asc": "asc",
+      "team_id" : 0,
+      "team_id_lead" : 4,
+      "team_id_tech" : 11,
+      "team_id_pop" : 8,
+      "team_id_sales" : 10,
+      "sort_name": "employee_name",
+      "sort_team": "team_id",
+      "sort_jabatan": "role_id"
+  }
+);
+var postDataLogin = (
+  {
+    "username": "admin@bizzy.co.id",
+    "password": "admin"
+  }
+);
+var responseCode = (
+  {
+    "ok": 200,
+    "created": 201,
+    "accepted": 202,
+    "no_content": 204,
+    "bad_request": 400,
+    "unauthorized": 401,
+    "forbidden": 403,
+    "not_found": 404,
+    "method_not_found": 405,
+    "too_many_requests": 429,
+    "internal_server_error": 500,
+    "service_unavailable": 503
+  }
+);
+var bodyLogin= function (roles) {
+  var body = postDataLogin ();
+  if (roles == 'Admin') {
+    body.username = 'admin@bizzy.co.id';
+    body.password = 'bizzy123';
+  }
+  else if (roles == 'Vendor2') {
+    body.username = 'vendor@bukalapan.com';
+    body.password = 'bizzy123';
+  }
+  else if (roles == 'Vendor3') {
+    body.username = 'vendor@tokoledia.com';
+    body.password = 'bizzy123';
+  }
+  else if (roles == 'Vendor4') {
+    body.username = 'vendor@ildav.com';
+    body.password = 'bizzy123';
+  }
+  else if (roles == 'salesAdmin') {
+    body.username = 'salesadmin1.ecart@bizzy.co.id';
+    body.password = 'bizzy123';
+  }
+  else if (roles == 'buyerAdmin') {
+    body.username = 'buyer@bizzy.co.id';
+    body.password = 'bizzy123';
+  }
+  else if (roles == 'financeSpecialist') {
+    body.username = 'finance.specialist@bizzy.co.id';
+    body.password = 'bizzy123';
+  }
+  return body;
+}
 
 module.exports = {
   customerBody: customerBody,
   cartNewBody: cartNewBody,
   addItemBody: addItemBody,
-  addActivityLog: addActivityLog
+  addActivityLog: addActivityLog,
+  getEmployeeList: queryEmployeeList,
+  postDataLogin: postDataLogin,
+  responseCode: responseCode,
+  bodyLogin: bodyLogin,
 };  
