@@ -7,6 +7,7 @@ var employee = require('./../../page-objects/api/backoffice/employee')
 var testScenario = {
     testSuiteEmployeeList: {
         describe: 'Employee Management list',
+        describe1: 'Employee Management list - search employee name by user sales',
         itGetListAll: 'should get list all employee',
         itSearchByName: 'should search employee by name',
         itSearchByEmail: 'should search employee by email',
@@ -48,7 +49,7 @@ describe ('@backoffice '+testScenario.testSuiteEmployeeList.describe, function (
         })
     });
 });
-describe ('@backoffice '+testScenario.testSuiteEmployeeList.describe, function () {
+describe ('@backoffice '+testScenario.testSuiteEmployeeList.describe1, function () {
     var token;
     before (function(done){
         common.getAuthTokenlogin(common.bodyLogin('salesAdmin'),function(resp){
