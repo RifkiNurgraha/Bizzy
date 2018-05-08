@@ -11,7 +11,8 @@ node("sdet-node-staging-1") {
           sh 'cat env.sample > .env'
   
         docker.image('timbru31/node-alpine-git').inside { c ->
-          sh 'npm install --verbose'
+          sh 'ls -a'
+          sh 'npm install --no-progress'
           sh 'npm run test-api'
         }
       }
