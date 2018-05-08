@@ -8,7 +8,7 @@ node("sdet-node-staging-1") {
       }
 
       stage("Functional Automation Testing"){
-          sh 'cat env.sample > .env'
+          sh 'cat .env'
   
         docker.image('timbru31/node-alpine-git').inside { c ->
           sh 'ls -a'
