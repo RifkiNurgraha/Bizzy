@@ -29,13 +29,13 @@ node("sdet-node-staging-1") {
               BASE_URL_BO_BUDDY=https://test-boapi.bizzy.co.id/v1%" > .env
             '''
     
-          docker.image('timbru31/node-alpine-git').inside { c ->
-            sh 'npm install -g npm@latest'
-            sh 'npm npm install --package-lock-only'
-            sh 'npm ci'
-            sh 'npm run test-api'
-            sh 'npm cache verify --verbose'
-            sh 'npm -version'
+          docker.image('timbru31/node-alpine-git:latest').inside { c ->
+            sh 'npm install npm@5.7.1'
+            sh './node_modules/.bin/npm install --package-lock-only'
+            sh './node_modules/.bin/npm  ci'
+            sh './node_modules/.bin/npm  run test-api'
+            sh './node_modules/.bin/npm  cache verify --verbose'
+            sh './node_modules/.bin/npm  -version'
           }
 
           sh 'npm cache verify --verbose'
