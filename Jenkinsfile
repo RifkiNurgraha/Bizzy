@@ -27,10 +27,8 @@ node("sdet-node-staging-1") {
 
             BASE_URL_BO_BUDDY=https://test-boapi.bizzy.co.id/v1%" > .env
           '''
-          sh 'cat .env'
   
         docker.image('timbru31/node-alpine-git').inside { c ->
-          sh 'ls -a'
           sh 'npm install --no-progress'
           sh 'npm run test-api'
         }
