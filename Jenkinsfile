@@ -30,12 +30,13 @@ node("sdet-node-staging-1") {
             '''
     
           docker.image('timbru31/node-alpine-git:latest').inside { c ->
-            sh 'npm install npm@5.7.1'
-            sh './node_modules/.bin/npm install --package-lock-only'
-            sh './node_modules/.bin/npm  ci'
-            sh './node_modules/.bin/npm  run test-api'
-            sh './node_modules/.bin/npm  cache verify --verbose'
-            sh './node_modules/.bin/npm  -version'
+            sh 'chown -R $USER /usr/local/lib/node_modules/'
+            sh 'npm install npm@latest'
+            sh 'npm install --package-lock-only'
+            sh 'npm ci'
+            sh 'npm run test-api'
+            sh 'npm cache verify --verbose'
+            sh 'npm -version'
           }
 
           sh 'npm cache verify --verbose'
