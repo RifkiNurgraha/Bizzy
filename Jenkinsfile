@@ -30,7 +30,9 @@ node("sdet-node-staging-1") {
             '''
     
           docker.image('timbru31/node-alpine-git').inside { c ->
-            sh 'npm install --no-progress'
+            sh 'npm install -g npm@5.7.1'
+            sh 'npm npm install --package-lock-only'
+            sh 'npm ci'
             sh 'npm run test-api'
             sh 'npm cache verify --verbose'
             sh 'npm -version'
