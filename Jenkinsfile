@@ -29,9 +29,7 @@ node("sdet-node-staging-1") {
               BASE_URL_BO_BUDDY=https://test-boapi.bizzy.co.id/v1%" > .env
             '''
     
-          docker.image('timbru31/node-alpine-git:latest').inside { c ->
-            sh 'sudo chmod 777 /usr/local/lib/node_modules/'
-            sh 'npm install npm@latest'
+          docker.image('bizzy:sdet-test').inside { c ->
             sh 'npm install --package-lock-only'
             sh 'npm ci'
             sh 'npm run test-api'
