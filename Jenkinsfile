@@ -33,9 +33,11 @@ node("sdet-node-staging-1") {
             sh 'npm install --no-progress'
             sh 'npm run test-api'
             sh 'npm cache verify --verbose'
+            sh 'npm -version'
           }
 
           sh 'npm cache verify --verbose'
+          sh 'npm -version'
         }
       }
     }
