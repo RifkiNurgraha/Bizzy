@@ -12,6 +12,7 @@ node("sdet-node-staging-1") {
   
         docker.image('timbru31/node-alpine-git').inside { c ->
           sh 'npm install --verbose'
+          sh 'npm run test-api'
         }
       }
     }
