@@ -9,7 +9,6 @@ node("sdet-node-staging-1") {
 
       stage("Functional Automation Testing"){
         docker.image('timbru31/node-alpine-git').inside { c ->
-          sh 'npm install --verbose'
           sh 'npm install --package-lock-only --verbose'
           sh 'npm ci'
         }
