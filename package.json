@@ -18,10 +18,6 @@
   "version": "1.0.0",
   "description": "nightwatchjs mocha poc automation",
   "main": "nightwatch.conf.js",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/bizzyindonesia//nightwatch-mocha-poc-automation.git"
-  },
   "author": "SDET Bizzy",
   "license": "",
   "homepage": "https://bitbucket.org/bizzyindonesia/nightwatch-mocha-poc-automation#readme",
