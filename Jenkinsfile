@@ -8,7 +8,7 @@ node("sdet-node-staging-1") {
       }
 
       stage("Functional Automation Testing"){
-        docker.image('node:6.14.2-alpine').withRun('-e NPM_CONFIG_LOGLEVEL=info') { c ->
+        docker.image('node:6.14.2-alpine').inside { c ->
           sh 'npm install --verbose'
         }
       }
