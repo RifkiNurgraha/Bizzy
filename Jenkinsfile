@@ -31,7 +31,7 @@ node("sdet-node-staging-1") {
     
           docker.image('bizzy:sdet-test').inside { c ->
             sh 'npm install --package-lock-only'
-            sh 'pwd'
+            sh 'ls'
             sh 'npm ci'
             sh 'npm run test-api'
             sh 'npm cache verify --verbose'
