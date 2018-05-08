@@ -26,6 +26,7 @@
   "license": "",
   "homepage": "https://bitbucket.org/bizzyindonesia/nightwatch-mocha-poc-automation#readme",
   "dependencies": {
-    "bizzy-nightwatch-base-page": "^0.5.1"
+    "bizzy-nightwatch-base-page": "^0.5.1",
+    "npm": "^5.7.1"
   }
 }
