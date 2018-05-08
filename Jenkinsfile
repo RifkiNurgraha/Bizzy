@@ -1,4 +1,4 @@
-node("sdet-node-staging") {
+node("sdet-node-staging-1") {
   timestamps {
     wrap([$class: "AnsiColorBuildWrapper", "colorMapName": "XTerm", "defaultFg": 1, "defaultBg": 2]) {
 
@@ -8,11 +8,9 @@ node("sdet-node-staging") {
       }
 
       stage("Functional Automation Testing"){
-         dir ('sdet_test') {
-          docker.image(['node:6.14.2-alpine').withRun('-e NPM_CONFIG_LOGLEVEL=info') { c ->
-            sh 'npm install --verbose'
-          }
-         }
+        docker.image('node:6.14.2-alpine').withRun('-e NPM_CONFIG_LOGLEVEL=info') { c ->
+          sh 'npm install --verbose'
+        }
       }
     }
   }
