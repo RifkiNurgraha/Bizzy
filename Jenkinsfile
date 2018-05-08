@@ -30,7 +30,7 @@ node("sdet-node-staging-1") {
             '''
     
           docker.image('timbru31/node-alpine-git:latest').inside { c ->
-            sh 'chmod 777 /usr/local/lib/node_modules/'
+            sh 'sudo chmod 777 /usr/local/lib/node_modules/'
             sh 'npm install npm@latest'
             sh 'npm install --package-lock-only'
             sh 'npm ci'
