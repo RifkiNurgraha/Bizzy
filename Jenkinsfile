@@ -8,7 +8,7 @@ node("sdet-node-staging-1") {
       }
 
       stage("Functional Automation Testing"){
-        docker.image('node:6.14.2-alpine').inside { c ->
+        docker.image('timbru31/node-alpine-git').inside { c ->
           sh 'npm install --verbose'
         }
       }
