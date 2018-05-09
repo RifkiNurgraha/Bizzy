@@ -1,4 +1,4 @@
-node("sdet-node-staging-1") {
+node("sdet-node-staging") {
   timestamps {
     wrap([$class: "AnsiColorBuildWrapper", "colorMapName": "XTerm", "defaultFg": 1, "defaultBg": 2]) {
 
@@ -28,7 +28,7 @@ node("sdet-node-staging-1") {
 
               BASE_URL_BO_BUDDY=https://test-boapi.bizzy.co.id/v1%" > .env
             '''
-    
+
           docker.image('bizzy:sdet-test').inside { c ->
             sh 'npm install --package-lock-only'
             sh 'ls'
