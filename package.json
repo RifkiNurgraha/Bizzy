@@ -28,5 +28,8 @@
   "dependencies": {
     "bizzy-nightwatch-base-page": "^0.6.0",
     "npm": "^5.7.1"
+  },
+  "devDependencies": {
+    "mochawesome": "^3.0.2"
   }
 }
